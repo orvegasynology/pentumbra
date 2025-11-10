@@ -1,0 +1,123 @@
+body {
+    background-color: black;
+    background-image: url(data/dark-fish-skin.png);
+    image-rendering: pixelated;
+    font-family: "MS UI Gothic", tahoma;
+    color: white;
+    font-size: 12px;
+}
+
+@font-face {
+    font-family: ibmcga2y;
+    src: url(data/ibmcga2y.woff)
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    background-image: url(data/computeroverlay.png);
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: repeat;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    z-index: 10000000;
+    animation: ScanlineAnimationLeft 2s linear infinite;
+    animation-name: ScanlineAnimationLeft;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+@keyframes ScanlineAnimationRight {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    100% {
+        transform: translateX(32px) translateY(-32px);
+    }
+}
+
+@keyframes ScanlineAnimationLeft {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    100% {
+        transform: translateX(-32px) translateY(-32px);
+    }
+}
+#mob {
+    background-color: gold;
+    color:black;
+    text-shadow:none;
+    font-weight:bold
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh; 
+}
+p {
+    margin:0px
+}
+hr {
+    border:0;
+    border-bottom:1px dashed white
+}
+a {
+    color:gold
+}
+a:hover {
+    color:#4dabb7
+}
+#d {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding:10px;
+  background-color:#00000050;
+  border:1px solid black;
+  text-shadow:1px 1px black;
+  width:300px;
+}
+.tumbra {
+    position:absolute;
+    top: -10px;
+}
+footer {
+    font-size:8px;
+    opacity:0.7;
+    position:absolute;
+    text-align:right;
+    right:0px;
+    bottom:-20px
+}
+h1 {
+    font-family:ibmcga2y;
+    font-weight:normal;
+    font-size:16px;
+    margin:0;
+}
+@media only screen and (max-width: 600px) {
+    #d {
+        width:100%;
+        font-size:17px;
+    }
+    footer {
+        font-size:13px;
+        position:relative;
+        text-align: center;
+    }
+
+}
