@@ -19,5 +19,5 @@ jobs:
           nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
           nekoweb-domain: 'pentumbra.vielleicht.lol'
           nekoweb-username: 'deploy'
-          directory: 'public'
+          directory: 'docs'
 
