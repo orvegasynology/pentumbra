@@ -1,0 +1,736 @@
+body {
+    background-color: #000;
+    background-image: url("/data/assets/grounds/black-mamba.png");
+    animation: scroll 19s linear infinite;
+    width: 666px;
+    position: relative;
+    display: block;
+    overflow: auto;
+    margin-left:100px;
+    color: white;
+}
+html:active {
+    cursor: grabbing;
+    }
+@keyframes scroll {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%
+    }
+}
+
+* {
+    color: white;
+}
+
+.animutations {
+    padding: 4px;
+    background-image: url(/data/assets/grounds/binding-dark.png);
+    background-color: #0a0a0a;
+    border-left: 4px solid black;
+    transition: 3s
+}
+
+.animutations:hover {
+    border-left: 4px solid darkgray;
+    transition: 3s
+}
+
+.header {
+    display: inline-flex;
+}
+
+.navigation {
+    height: 90px;
+}
+
+.navtxt {
+    background-image: url(/data/assets/grounds/binding-dark.png);
+    background-color: #0a0a0a;
+    width:350px;
+    height:100px
+}
+
+.navtxt:hover{
+  height:200px;
+  position:absolute;
+  left:97px;
+  z-index:999999999999999999999999999999999999999;
+  }
+
+.navtxt h1 {
+    font-family: 'Comic Sans MS';
+    margin-top:0;
+    margin-bottom: 0;
+    font-weight: none;
+}
+
+.navtxt h1 span {
+    font-size: 9px;
+    font-family: "MS UI Gothic", Tahoma;
+    opacity: 0.5;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: none;
+}
+
+.navtxt ul li {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    margin-left: 1px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+
+}
+
+.navtxt ul li:hover {
+    border: 1px solid transparent;
+    border-image: url("/data/assets/borders/ants.gif") 1 repeat;
+}
+
+.navtxt ul li a:hover {
+    color: dimgrey
+}
+
+.navtxt ul li .activea {
+    text-decoration: none;
+}
+
+.navtxt ul li a:active {
+    color: orange
+}
+
+.navtxt ul li .deadlink {
+    text-decoration: line-through;
+    color: grey
+}
+
+.navtxt ul li img {
+    position: relative;
+    top: 2px
+}
+
+.side {
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url("/data/assets/HQ/charlie.png");
+    background-position: bottom;
+    background-repeat: no-repeat
+}
+
+.main {
+    width: 50%;
+}
+
+#statuscafe-username a {
+    color: black;
+}
+
+#statuscafe-content {
+    color: black;
+    width: 190px;
+}
+
+.sideright {
+    width: 30%;
+    background-color: black;
+    background-image: url("/data/assets/grounds/checkered-light-emboss.png")
+}
+
+.statusholder {
+    background-image: url("/data/assets/HQ/blob.png");
+    background-size: 266px 266px;
+    height: 266px;
+    width: 266px;
+    position: absolute;
+    bottom: -710px;
+    left: -300px;
+    padding-left: 40px;
+    padding-top: 20px;
+    background-repeat: no-repeat;
+  
+}
+
+/*Following code from Parkaction. If Meel wants me to remove this, please let me know!*/
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    background-image: url("/data/computeroverlay.png");
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: repeat;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    z-index: 100000000000;
+    animation: ScanlineAnimationLeft 2s linear infinite;
+    animation-name: ScanlineAnimationLeft;
+    animation-duration: 200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+@keyframes ScanlineAnimationLeft {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    100% {
+        transform: translateX(-64px) translateY(-64px);
+    }
+}
+
+#wobble {
+    animation: rainbow .5s linear;
+    animation-iteration-count: infinite;
+    color: yellow
+}
+
+@keyframes rainbow {
+
+    100%,
+    0% {
+        color: rgb(255, 0, 0);
+    }
+
+    8% {
+        color: rgb(255, 127, 0);
+    }
+
+    16% {
+        color: rgb(255, 255, 0);
+    }
+
+    25% {
+        color: rgb(127, 255, 0);
+    }
+
+    33% {
+        color: rgb(0, 255, 0);
+    }
+
+    41% {
+        color: rgb(0, 255, 127);
+    }
+
+    50% {
+        color: rgb(0, 255, 255);
+    }
+
+    58% {
+        color: rgb(0, 127, 255);
+    }
+
+    66% {
+        color: rgb(0, 0, 255);
+    }
+
+    75% {
+        color: rgb(127, 0, 255);
+    }
+
+    83% {
+        color: rgb(255, 0, 255);
+    }
+
+    91% {
+        color: rgb(255, 0, 127);
+    }
+}
+
+#phrase {
+    cursor: help;
+}
+
+.header q {
+    white-space: nowrap;
+}
+
+
+.headertxt {
+    /*width:661px;*/
+    width: 546px;
+    border: 1px solid transparent;
+    border-image: url("/data/assets/borders/ants.gif") 1 repeat;
+    position: relative;
+    bottom: -5px;
+    height: 14px;
+    background-image: url(/data/assets/grounds/black-twill.png);
+    background-color: #0a0a0a;
+}
+
+.header q:hover,
+.headertxt:hover {
+    opacity: 1;
+}
+
+.header h1 {
+    font-size: 0;
+    font-family: "ibmcga2y";
+    font-weight: normal;
+    text-shadow: 2px 2px black;
+    color:white;
+}
+
+.header h1 span {
+    font-size: 23px;
+}
+
+.lettera:hover {
+    color: red;
+    position: relative;
+    bottom: 3px
+}
+
+.lettera::selection {
+  background-color:transparent;
+    color: red
+}
+
+.letterb:hover {
+    color: orangered;
+    position: relative;
+    bottom: 3px
+}
+
+.letterb::selection {
+  background-color:transparent;
+    color: orangered
+}
+
+.letterc:hover {
+    color: yellow;
+    position: relative;
+    bottom: 3px
+}
+
+.letterc::selection {
+  background-color:transparent;
+    color: yellow
+}
+
+.letterd:hover {
+    color: lime;
+    position: relative;
+    bottom: 3px
+}
+
+.letterd::selection {
+  background-color:transparent;
+    color: lime
+}
+
+.lettere:hover {
+    color: blue;
+    position: relative;
+    bottom: 3px
+}
+
+.lettere::selection {
+  background-color:transparent;
+    color: blue
+}
+
+.letterf:hover {
+    color: magenta;
+    position: relative;
+    bottom: 3px
+}
+
+.letterf::selection {
+  background-color:transparent;
+    color: magenta;
+
+}
+
+.info:hover {
+    text-shadow: grey 0 0 10px;
+    transition: 0.2s
+}
+
+.info {
+    transition: 0.2s;
+    text-indent: 13px;
+}
+
+.doing {
+    font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    height: 50px;
+    overflow: auto;
+    border: 3px ridge red;
+    background-color: black;
+    transition: 0.5s;
+    margin-bottom: 70px;
+}
+
+.doing:hover {
+    box-shadow: 0px 2px red, 0px 4px orangered, 0px 6px yellow, 0px 8px lime, 0px 10px blue, 0px 12px magenta;
+    transition: 0.5s;
+    z-index: 99;
+    height: 120px;
+    margin-bottom: 0px;
+}
+
+.side h1 span {
+    font-size: 15px;
+    background-color: darkblue
+}
+
+.side h1 {
+    font-size: 0;
+    font-family: "ibmcga2y";
+    font-weight: normal;
+    text-shadow: 2px 2px black;
+    position: absolute;
+    display: block;
+    top: 110px;
+    left: -15px;
+    z-index: 999999
+}
+
+.doing img {
+    width: 14px;
+    height: 15px;
+    filter: hue-rotate(-45deg)
+}
+
+.doing ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 12px;
+    list-style-image: url("/data/assets/UI/Bullet.gif")
+}
+
+.doing p,
+.doing li {
+    font-family: 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+.verb {
+    text-shadow: 2px 2px black;
+}
+
+.whatiwannado {
+    margin: 4px;
+    border: 1px solid red;
+    height: 300px
+}
+
+.headertxt::selection {
+  background-color:transparent;
+    background-color: transparent;
+    color: gold;
+    text-shadow: 2px 2px orange
+}
+
+.hovuh:hover {
+    filter: hue-rotate(160deg);
+    animation-play-state: paused;
+}
+
+.hovuh {
+    animation-play-state: running;
+    position: relative;
+    right: 0px;
+}
+
+.cat:hover {
+    animation: rainbow 2s infinite linear;
+    transition: 5s
+}
+
+.cat {
+    animation: rainbow 10s infinite linear;
+    transition: 5s z-index:99;
+}
+
+@keyframes rainbow {
+    from {
+        filter: hue-rotate(0deg)
+    }
+
+    to {
+        filter: hue-rotate(360deg)
+    }
+}
+
+.babies {
+    margin-left: 25%;
+    margin-right: 25%
+}
+
+#mobring #basic {
+    border: 2px solid black;
+    color: black;
+    background: white;
+    width: 180px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: OCR A Std, monospace;
+    font-weight: bold;
+}
+
+#mobring #basic .head {
+    margin-top: 10px;
+    margin-bottom: 0
+}
+
+#mobring #basic img {
+    margin-top: 1px;
+}
+
+#mobring #basic .name {
+    margin-top: 0px;
+}
+
+#mobring #basic a,
+#mobring #small a {
+    color: black;
+    text-decoration: underline;
+}
+
+#mobring #basic a:hover,
+#mobring #small a:hover,
+#mobring #puter a:hover {
+    color: #d52991;
+}
+
+#mobring #s-w p {
+    font-size: 13px;
+    text-align: center;
+    font-family: 'MS Pgothic';
+}
+
+#mobring #small {
+    width: 90px;
+}
+
+#mobring #d-w p {
+    font-size: 13px;
+    text-align: center;
+    font-family: 'MS Pgothic';
+}
+
+#mobring #dimp {
+    width: 90px;
+}
+
+#mobring #mob {
+    border: 2px solid;
+    color: MidnightBlue;
+    width: 245px;
+    height: 140px;
+    background-image: url('https://sugarforbrains.neocities.org/mobring/mobbg.png');
+    background-size: cover;
+    font-family: Verdana, sans-serif;
+}
+
+
+#mobring #mob #text {
+    width: 180px;
+    margin-left: 80px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#mobring #mob #mobring-nav {
+    height: 30px;
+    ;
+    width: 166px;
+    margin-left: 95px;
+    margin-top: 45px;
+    text-align: center;
+    font-size: 11px;
+}
+
+#mobring #mob a {
+    color: MidnightBlue;
+}
+
+#mobring #puter {
+    position: relative;
+    border: 2px solid;
+    width: 210px;
+    height: 180px;
+    background-image: url('https://sugarforbrains.neocities.org/mobring/computar.jpg');
+    background-size: cover;
+    background-position-y: -10px;
+}
+
+#mobring #puter #text {
+    text-align: center;
+    position: absolute;
+    background: black;
+    border: 1px solid black;
+    color: white;
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+}
+
+#mobring #puter p {
+    font-family: impact, sans-serif;
+    font-size: 26px;
+    margin-top: 60px;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0px white, -1px -1px 0px white, -1px 1px 0px white, 1px -1px 0px white;
+}
+
+#mobring #puter a {
+    color: white;
+}
+
+.taquito {
+    border: 1px solid white;
+    background-color: black;
+    height: 400px;
+    position: absolute;
+    top: 1150px;
+    width:500px;
+    right: -550px;
+}
+.taqbar {
+    padding:3px;
+}
+
+.taqbar ul {
+    padding:0px;
+    margin:0px;
+    list-style-type:none;
+}
+
+.taq {
+    font-weight:normal;
+    font-style:italic;
+    background-color:rgba(255, 255, 255 0.2);
+    border: 1px solid transparent;
+    border-image: url("/data/assets/borders/ants.gif") 1 repeat;
+    margin-left:1px;
+    margin-right:1px;
+}
+.playlist {
+  position:fixed;
+  bottom:0px;
+  right:0px;
+  z-index:999999999999999;
+  height:50px;
+  background-color:black;
+  background-image:url("/data/assets/grounds/stars5.gif");
+  width:200px;
+  transition:1s;
+  overflow:hidden;
+  }
+.playlist:hover {
+  height:300px;
+  transition:1s;
+  overflow:auto;
+  }
+.playlist audio {
+  filter:invert(100);
+  width:200px;
+  position:sticky;
+  top:0px;
+  height:25px;
+  }
+.playlist h1 {
+  font-size:14px;
+  margin:0px;
+  }
+audio::-webkit-media-controls-panel {
+  background-color:white;
+  height:30px;
+  }
+audio::-webkit-media-controls-enclosure {
+    border-radius: 0;
+    background-color:white;
+}
+.active {
+  color:red;
+  }
+.playlist ul li:nth-child(even) {
+  background-color:rgba(0, 0, 0, 0.76);
+  background-color:black;
+  list-style-image:none;
+  }
+.playlist ul li:nth-child(odd):before {
+    content: url('/data/assets/UI/bullet002.gif');  
+  margin-right:3px;
+  }
+  .playlist ul li:nth-child(even):before {
+    content: url('/data/assets/UI/bullet002.gif');  
+    filter:invert(100);
+  margin-right:3px;
+  }
+.playlist ul li:nth-child(odd) {
+  background-color:black;
+  list-style-image:none;
+  }
+.tallyhall {
+  margin-bottom:80px
+  }
+.mefr {
+  width:40%;
+  height:300px;
+  background-image:url("/data/assets/HQ/mefr.png");
+  background-size:100%
+  }
+.acus {
+  background-image:url("/data/assets/UI/chatbub.png");
+  background-size:100%;
+  background-repeat:no-repeat;
+  width:465;
+  height:205px;
+  position:relative;
+  right:-150px;
+  bottom:-230px;
+  font-family:"cute";
+  font-size:24px;
+  font-weight:bold;
+  padding-top:30px;
+  padding-left:20px;
+  animation:20s acus linear infinite
+  }
+  .song {width:60%}
+  .song h1 {
+    position:absolute;
+    top:880px;
+    right:0px;
+    text-align:right;
+    font-family:vcrosd;
+    font-weight:normal;
+    color:red;
+    text-shadow:1px 1px yellow;
+    width:100%
+    }
+.acus p {
+  margin:0px;
+  padding:0px
+  }
+@keyframes acus {
+  0% {
+    filter:hue-rotate(0deg)
+    }
+  100% {
+    filter:hue-rotate(360deg)
+    }
+  }
+@font-face {
+  font-family:"cute";
+  src:url("/data/font/serif/CuteHandWriting.ttf")
+  }

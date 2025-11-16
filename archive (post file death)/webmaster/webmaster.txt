@@ -1,0 +1,214 @@
+<!-- if you come here to mooch off of code be my guest. Do it. just dont steal graphics. if you wanna know where i found something, email me!-->
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / About the webmaster.</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/pagesheets/webmaster.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+<body onload="webamp.play();">
+    <div class="body flex">
+        <div class="nav">
+            <ul class="links">
+                <p style="text-align:center;margin:0;font-size:14px"><b>contents</b></p>
+                <div id="linkList">
+                    <li><a href="about.html"  target="iframe">me.</a></li>
+                    <li><a href="likesdislikes.html" class="" target="iframe">likes & dislikes.</a></li>
+                    <li><a href="questionnaire" class="" target="iframe">questionaire.</a></li>
+                    <li><a href="other" class="" target="iframe">graphics.</a></li>
+                </div>
+                <p style="text-align:center;margin:0;font-size:14px"><b>pentumbra</b></p>
+                <li><a href="/index.html">landing.</a></li>
+                <li><a href="/home.html">home.</a></li>
+                <li><a href="/art/index.html">gallery.</a></li>
+            </ul>
+            <div class="bod">
+                <img style="height:165px" src="/data/assets/HQ/icons/mio.jpg">
+                <p style="text-align:center;margin:0"><b>tl;dr</b></p>
+                <table>
+                    <tr>
+                        <td class="info">name</td>
+                        <td>call me Corporal (Corp) or HQ. Or anything really.</td>
+                    </tr>
+                    <tr>
+                        <td class="info">sign</td>
+                        <td>libra. 10 07</td>
+                    </tr>
+                    <tr>
+                        <td class="info">align</td>
+                        <td>weird mix of lawful/chaotic neutral</td>
+                    </tr>
+                    <tr>
+                        <td class="info">are you queer</td>
+                        <td><a href="https://en.pronouns.page/@tsumihq" target="blank_">very</a>. i am unlabled and
+                            aromantic greysex. them/all.</td>
+                    </tr>
+                    <tr>
+                        <td class="info">where</td>
+                        <td>merica.</td>
+                    </tr>
+                    <tr>
+                        <td class="info">languages</td>
+                        <td>(most to least fluent) english, german, french, russian</td>
+                    </tr>
+                    <tr>
+                        <td class="info">ELO</td>
+                        <td title="working on an script that grabs a chess.com rapid ELO. probably isnt possible, as neocities only hosts static sites, but i will try.">
+                            < 1000</td>
+                    </tr>
+                    <tr>
+                        <td class="info">job</td>
+                        <td>furry. student. queer.</td>
+                    </tr>
+                    <tr>
+                        <td class="info">philosophy</td>
+                        <td>do whatever. have fun.</td>
+                    </tr>
+                    <tr>
+                        <td class="info">furry code</td>
+                        <td>FCfp4as A+++ C- D++++ H- P++++ R-- R- T++++ W--- W- Z Sp c++++ f++++ i+++ j p+++</td>
+                    </tr>
+                    <!--<tr>
+                        <td class="info">troll</td>
+                        <td>Bonadi Laatid:___YU_0JCONaSiIiI_y4u_wAAiYmJ_7op0ZwpyisrAAAAS0tLOjo6ERERAAAAERERMzMzxMTEQWYAIDMACIBtAJgBegCjgEoAXvwZADJQBkoQCG</td>
+                    </tr>-->
+                </table>
+                <img src="/data/assets/ads/lts.jpg" style="width:160px">
+            </div>
+        </div>
+        <div class="bodyer">
+            <iframe name="iframe" src="about.html" id="iframe" style="margin-top:5px"></iframe>
+        </div>
+    </div>
+<div style="width:40px; height:40px; position:absolute; top:200px; right:120px;">
+<!--	<div id="winamp-container"></div>-->
+    <script>
+const Winamp = window.Webamp;
+// All configuration options are optional.
+const webamp = new Webamp({
+    // Optional.
+/*    initialTracks: [
+        {
+            metaData: {
+                artist: "K.K. Slider",
+                title: "Soul",
+            },
+            url: "/audio/acnh/1-31%20K.K.%20Soul.mp3",
+        },
+        {
+            metaData: {
+                artist: "Machine Girl",
+                title: "MG2",
+            },
+            url: "/audio/web/Mg2.mp3",
+        },
+        {
+            metaData: {
+                artist: "MF DOOM",
+                title: "Kon Queso",
+            },
+            url: "/audio/web/kon-queso-mf-doom.mp3",
+        },
+        {
+            metaData: {
+                artist: "MF DOOM",
+                title: "One Beer",
+            },
+            url: "/audio/web/One%20Beer.mp3",
+        },
+        {
+            metaData: {
+                artist: "The Beatles",
+                title: "And I Love Her",
+            },
+            url: "/audio/reigen/And%20I%20Love%20Her%20-%20Remastered%202009.mp3",
+        },
+        {
+            metaData: {
+                artist: "K^2",
+                title: "And The Problem",
+            },
+            url: "/audio/web/and-the-problem-halley-labs.mp3",
+        },
+        {
+            metaData: {
+                artist: "K^2",
+                title: "Battle Against An Inscrubtable Machine",
+            },
+            url: "/audio/web/battle-against-an-inscrutable-machine-halley-labs.mp3",
+        },
+        {
+            metaData: {
+                artist: "Madvillain",
+                title: "Meat Grinder",
+            },
+            url: "/audio/web/meat-grinder-madvillain.mp3",
+        },
+        {
+            metaData: {
+                artist: "Rotteen",
+                title: "Cranes Rage",
+            },
+            url: "/audio/web/crane-s-rage-halley-labs.mp3",
+        },
+        {
+            metaData: {
+                artist: "K.K. Slider",
+                title: "Hop",
+            },
+            url: "/audio/acnh/5-26.%20K.K.%20Hop%20Instrumental.mp3",
+        },
+        {
+            metaData: {
+                artist: "Darius",
+                title: "Exuviae",
+            },
+            url: "/audio/web/exuviae-halley-labs.mp3",
+        },
+          {
+            metaData: {
+                artist: "Bandetto",
+                title: "Gameshark",
+            },
+            url: "/audio/web/gameshark-halley-labs.mp3",
+        },
+        {
+            metaData: {
+                artist: "MF DOOM",
+                title: "Hoe Cakes",
+            },
+            url: "/audio/web/hoe-cakes-mf-doom.mp3",
+        },
+        {
+            metaData: {
+                artist: "Snot",
+                title: "Stoopid",
+            },
+            url: "/audio/web/Stoopid.mp3",
+        },
+ {
+            metaData: {
+                artist: "Madvillain",
+                title: "All Caps",
+            },
+            url: "/audio/web/all-caps-madvillain.mp3",
+        },
+      ],
+    initialSkin: {
+        url: "/winamp/Winamp_For_Windows_XP.wsz"
+    },
+});
+webamp.renderWhenReady(document.getElementById('winamp-container'));*/
+</script>
+</div>
+</body>
+
+</html>

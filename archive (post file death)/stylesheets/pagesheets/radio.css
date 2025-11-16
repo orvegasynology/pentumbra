@@ -1,0 +1,46 @@
+body {
+  background-color:black;
+  color:grey;
+  font-family:Courier;
+  width:400px;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  }
+  div {
+  text-indent:80px
+    }
+/*Following code from Parkaction. If Meel wants me to remove this, please let me know!*/
+body::after {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    background-image: url("/data/computeroverlay.png");
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: repeat;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    z-index: 100000000000;
+    animation: ScanlineAnimationLeft 2s linear infinite;
+    animation-name: ScanlineAnimationLeft;
+    animation-duration: 200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+@keyframes ScanlineAnimationLeft {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    100% {
+        transform: translateX(-64px) translateY(-64px);
+    }
+}

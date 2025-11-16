@@ -1,0 +1,17 @@
+body {
+  background-color:grey;
+  font-family:basiic;
+  font-size:16px;
+}
+.container {
+  margin-left:auto;
+  margin-right:auto;
+  width:600px;
+}
+.sidebar {
+  border:1px solid black;
+  width:200px;
+}
+.main {
+  width:400px;
+}

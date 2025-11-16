@@ -1,0 +1,32 @@
+body {
+  background-color:#131313;
+  background-image:url('/data/assets/grounds/bo-play.png');
+  width:550px;
+  margin-left:auto;
+  margin-right:auto
+  }
+.header {
+  text-align:center;
+  }
+.body {
+  background-color:black;
+  background-image:url('/data/assets/grounds/checkered-light-emboss.png');  
+  color:white;
+  padding-bottom:8px;
+  }
+.logo {
+  background-image:url("/data/assets/UI/wall.gif");
+  height:100px;
+  }
+h2 {
+  margin-left:5px;
+  margin-right:5px;
+  font-size:14px;
+  font-weight:normal;
+    border: 1px solid transparent;
+    border-image: url("/data/assets/borders/ants.gif") 1 repeat; 
+    background-color:#000;
+    background-image:url(data/assets/grounds/black-mamba.png);
+}
+.buttons {
+  }

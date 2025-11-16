@@ -1,0 +1,523 @@
+* {
+  font-family:fredoka
+  }
+    .bg{
+      width: 110%;
+  height: 110%;
+  position: fixed;
+  z-index: -11;
+  background-color: 
+transparent; 
+  background-image: linear-gradient(135deg, yellow 25%, transparent 25%), 
+    linear-gradient(225deg, yellow 25%, transparent 25%), 
+    linear-gradient(315deg, yellow 25%, transparent 25%), 
+    linear-gradient(45deg, yellow 25%, transparent 25%); 
+  background-position: -30px 0, -30px 0, 0 0, 0 0;
+  background-size: 60px 60px;
+  background-repeat: repeat; 
+  opacity:0.3;
+  margin-left:-20px;
+  margin-top:-20px;
+  animation:scroller 80s infinite linear
+}
+
+  #mobring {
+
+    position: fixed;
+    bottom: 0px;
+    left: 30px;
+    z-index:999999999999
+}
+::selection {
+  background-color:#27b293;
+  color:gold;
+  }
+.body {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: pop-a 18s infinite linear;
+}
+
+body {
+    background-image: linear-gradient(45deg, #f3ff0f 25%, #ffef0f 25%, #ffef0f 50%, #f3ff0f 50%, #f3ff0f 75%, #ffef0f 75%, #ffef0f 100%);
+    background-size: 141.42px 141.42px;
+    animation: scroll 20s linear infinite;}
+    body
+    {
+        cursor: help, auto
+    }
+@keyframes scroller {
+    0% {
+        background-position: 0px 0px
+    }
+
+    0% {
+        background-position: 2400px 0px
+    }
+}
+@keyframes scroll {
+    0% {
+        background-position: 0% 0%
+    }
+
+    0% {
+        background-position: 100% 0%
+    }
+}
+
+.title {
+    width: 245px;
+    animation: 12s pop infinite alternate linear, 3s updown infinite alternate linear;
+    position: absolute;
+}
+
+@keyframes updown {
+    0% {
+        margin-top: 0px
+    }
+
+    100% {
+        margin-top: 20px
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1.02) rotate(5deg);
+        opacity: 0.8
+    }
+
+    50% {
+        transform: scale(1) rotate(-5deg);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(1.02) rotate(5deg);
+        opacity: 0.8
+    }
+}
+
+@keyframes pop-a {
+    0% {
+        transform: scale(1.02) rotate(2deg);
+    }
+
+    50% {
+        transform: scale(1) rotate(-2deg);
+    }
+
+    100% {
+        transform: scale(1.02) rotate(2deg);
+    }
+}
+
+@keyframes pop-b {
+    0% {
+        transform: scale(1.02) rotate(-2deg);
+    }
+
+    50% {
+        transform: scale(1) rotate(2deg);
+    }
+
+    100% {
+        transform: scale(1.02) rotate(-2deg);
+    }
+}
+
+.reigen {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.reigen-a {
+    background-image: url("/data/assets/reigen/goofball.png");
+    height: 750px;
+    width: 400px;
+    margin-top: -80px;
+    margin-left: -80px;
+    z-index: 100;
+    position: relative;
+}
+
+.reigen-a:hover {
+    filter: blur(2px);
+    animation: 0.01s runnyboi infinite alternate linear
+}
+
+@keyframes runnyboi {
+    0% {
+        left: 10px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.reigen-b {
+    background-image: url("/data/assets/reigen/reigen.png");
+    height: 550px;
+    width: 200px;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -200px;
+    animation: pop-a 5s linear infinite alternate;
+}
+
+.reigen-c {
+    background-image: url("/data/assets/reigen/hm.png");
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: 3;
+    margin-left: -60px;
+    margin-top: 200px;
+    animation: hmm 5s linear infinite alternate;
+}
+
+.reigen-f {
+    background-image: url("/data/assets/reigen/thing.png");
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    z-index: 4;
+    margin-left: 380px;
+    margin-top: 0px;
+    animation: spinny 2s linear infinite;
+}
+
+@keyframes spinny {
+    0% {
+        transform: rotate(360deg) scaleX(-1);
+    }
+
+    100% {
+        transform: rotate(0deg) scaleX(-1);
+    }
+}
+
+@keyframes hmm {
+    0% {
+        margin-left: -30px
+    }
+}
+
+.reigen-d {
+    background-image: url("/data/assets/reigen/countonme.png");
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 50px;
+    border-radius: 60px;
+    animation: pop-a 10s linear infinite
+}
+
+.reigen-e {
+    background-image: url("/data/assets/reigen/idiot.png");
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 50px;
+    margin-top: 50px;
+    animation: pop-a 1s linear infinite
+}
+
+.reigen-g {
+    background-image: url("/data/assets/reigen/future.png");
+    z-index: 99999;
+    height: 270px;
+    width: 200px;
+    top: 1000px;
+    position: absolute;
+    right: 400px;
+    transform: rotate(-10deg);
+    animation: cutey infinite 3s steps(2, end);
+        opacity:0.9;
+}
+.reigen-h {
+    background-image: url("/data/assets/reigen/cement.jpg");
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:1200px;
+    right:-250px
+  }
+.reigen-j {
+    background-image: url("/data/assets/reigen/smella.png");
+    z-index: 99999;
+    height: 221px;
+    width: 136px;
+    top: 1550px;
+    position: absolute;
+    right:-100px;
+    transform: rotate(2deg) scaleX(-1);
+    opacity:0.9;
+  }
+@keyframes cutey {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    0% {
+        transform: rotate(-10deg);
+    }
+}
+
+.thing {
+    height: 315px;
+    width: 320px;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: #cfffcc;
+    background-image: repeating-linear-gradient(45deg, #c2ffc2 25%, transparent 25%, transparent 75%, #c2ffc2 75%, #c2ffc2), repeating-linear-gradient(45deg, #c2ffc2 25%, #cfffcc 25%, #cfffcc 75%, #c2ffc2 75%, #c2ffc2);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    box-shadow: 12px 12px gold;
+    position: absolute;
+    top: 870px;
+    margin-left: -100px;
+    animation: pop-a 10s linear infinite;
+
+}
+
+.div-a {
+    animation: updown 2s linear infinite alternate, scroll 60s linear infinite;
+    height: 500px;
+    border-radius: 30px;
+    background-image: linear-gradient(45deg, #5fa1ed 25%, #4bb2db 25%, #4bb2db 50%, #5fa1ed 50%, #5fa1ed 75%, #4bb2db 75%, #4bb2db 100%);
+    background-size: 56.57px 56.57px;
+    outline: 4px dashed white;
+}
+
+.title,
+h1 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 34px;
+    margin: 0px
+}
+
+.title p {
+    font-size: 16px;
+    margin: 0px;
+    text-align: right;
+    color: yellow;
+    text-shadow: 1px 1px #d34300, -1px -1px #d34300, 1px -1px #d34300, -1px 1px #d34300, 1px 2px #d34300, 2px 1px #d34300, -2px 1px #d34300, 0px 2px #d34300, 0px -2px #d34300;
+    filter: drop-shadow(1px -1px 0px orange) drop-shadow(1px 1px 0px orange) drop-shadow(-1px 1px 0px orange) drop-shadow(-1px -1px 0px orange)
+}
+
+.r {
+    transform: rotate(-2deg);
+    color: orange;
+    text-shadow: 3px 3px white, -3px -3px white, 3px -3px white, -3px 3px white, 1px 4px white, 4px 1px white, -4px 1px white, -1px 4px white, 0px -4px white;
+}
+
+.a {
+    transform: rotate(2deg);
+    color: gold;
+    text-shadow: 3px 3px white, -3px -3px white, 3px -3px white, -3px 3px white, 1px 4px white, 4px 1px white, -4px 1px white, -1px 4px white, 0px -4px white;
+
+}
+
+#audioPlayer {
+    position: relative;
+    left: -150px;
+    transform: rotate(90deg);
+    top: 200px;
+    transition: 1s
+}
+
+#audioPlayer:hover {
+    filter: invert(100);
+    transition: 1s;
+    transform: scale(1.2), rotate(90deg);
+    ;
+}
+
+.point {
+    border-radius: 999px;
+    background-color: #ff256a;
+    border: 3px solid white;
+    height: 10px;
+    width: 10px;
+    z-index: 999;
+    opacity: 0;
+}
+
+.playlist {
+    height: 175px;
+    border: 5px solid white;
+    overflow: auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: fredoka;
+    background-color: #ff75d8;
+    opacity: 0.8;
+    background-image: linear-gradient(135deg, #eb65ff 25%, transparent 25%), linear-gradient(225deg, #eb65ff 25%, transparent 25%), linear-gradient(45deg, #eb65ff 25%, transparent 25%), linear-gradient(315deg, #eb65ff 25%, #ff75d8 25%);
+    background-position: 38px 0, 38px 0, 0 0, 0 0;
+    background-size: 76px 76px;
+    background-repeat: repeat;
+}
+
+.hot {
+    background-image: url("/data/assets/reigen/deaththreats.gif");
+    height: 100px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-size: 400px 200px;
+    background-repeat: repeat;
+    background-position: center
+}
+
+li {
+    color: white;
+}
+
+.active {
+    color: #83002b
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+b {
+    font-weight: 600
+}
+
+.hair {
+    display: block
+}
+
+.phair:hover+.hair {
+    display: none
+}
+
+.marquee {
+    position: absolute;
+    top: 580px;
+    animation: pop-a 5s linear infinite
+}
+
+.marqueee {
+    font-size: 20px;
+    font-weight: 500;
+    color: #563f09;
+    background-color: gold;
+    width: 500px;
+    font-family: fredoka
+}
+
+.marqueee a {
+    color: #563f09
+}
+.why {
+  height:200px;
+  border:5px solid white;
+  position:absolute;
+  width:500px;
+  top:1500px;
+  left:0px;
+  border-radius:10px;
+  background-color: #f4f7e6;
+background-image:  linear-gradient(#d4e3ff 2px, transparent 2px), linear-gradient(90deg, #d4e3ff 2px, transparent 2px), linear-gradient(#d4e3ff 1px, transparent 1px), linear-gradient(90deg, #d4e3ff 1px, #f4f7e6 1px);
+background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  }
+.bc {
+  height:200px;
+  width:350px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding-top:5px;
+  text-indent:20px;
+  font-size:14px;
+}
+::root {
+  --s: 85px; /* control the size*/
+  --c1: #e8d1ff;
+  --c2: #f9ccff;
+  --c3: #e7c2ff;
+}
+.reigen-i {
+  width:350px;
+  height:200px;
+  background-position:right bottom;
+  background-image:url("/data/assets/reigen/dirtylungs.png")
+  }
+.p {
+    background-color: #f4eee7;
+    padding: 5px;
+    text-indent: 10px;
+    font-size: 14px;
+    overflow: auto;
+    height: 200px;
+    font-family: fredoka;
+    border: 3px dashed #118c90;
+    margin-top: 10px;
+    border-radius: 5px 5px 25px 25px;
+    color: #118c90
+}
+
+.p a {
+    color: #118c90
+}
+
+.titlet {
+    text-shadow: 4px 4px gold, 2px 2px gold
+}
+.bc marquee {
+  position:sticky;
+  top:0px;
+  border:5px solid #ffb110;
+  border-radius:5px;
+  background-color:#ffee3e;
+  color:#cd3100;
+  padding:10px;
+  font-family:fredoka;
+  font-weight:600;
+  width:175px;
+  margin-bottom:3px;
+  }
+.p-a {
+background-color: #f4eee7;
+background-image: radial-gradient(#ffdd86 1.2000000000000002px, #f4eee7 1.2000000000000002px);
+background-size: 24px 24px;
+padding: 5px;
+    text-indent: 10px;
+    font-size: 14px;
+    overflow: auto;
+    height: 115px;
+    font-family: fredoka;
+    border: 3px dashed gold;
+    margin-top: 1px;
+    border-radius: 5px;
+    color: #563f09;
+    margin-left:3px;
+    
+}
+.div-c {
+  margin-top:250px;
+  
+}
+.links ul li a {
+  color:inherit;
+}
+.links ul li {
+  color:black;
+  
+}

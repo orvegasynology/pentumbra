@@ -1,0 +1,199 @@
+<!-- if you come here to mooch off of code be my guest. just dont steal graphics. on this page, however, none of the graphics belong to me, nor any of the characters or artworks. heck, the layout and design isnt even mine! its based on an old page of an older iteration of heckscaper.com or msx.horse. :3 -->
+<!DOCTYPE html>
+<html>
+<head>  
+    <!-- Boring Stuff -->
+    <title>HALLEY LABS/LAPFOX</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    <style>
+      body {
+        background-color:black;
+        background-image:url("gridbg.png");
+        background-position:center;
+        background-size: 1080px;
+        background-attachment: fixed;
+        height:100%;
+        background-repeat:no-repeat; 
+        margin:0px;
+        padding:0px;
+      }
+      .credits {
+          font-family: 'Courier New', monospace;
+          font-size:20px;
+          color:white;
+        width:400px;
+        text-align:center;
+      }
+      .credits a {
+        color:cyan;
+        font-weight:600;
+      }
+      .credits a:hover {
+        color:#FF00FF;
+      }
+      .container {
+        width:644px;
+        background-image:url("bgpanel.png");
+        margin-left:auto;
+        margin-right:auto;
+      }
+      p {
+        margin:0px;
+        text-align:center;
+      }
+      .notice {
+        width:300px;
+        background-color:yellow;
+        margin-top:10px;
+        margin-bottom:10px;
+        color:#470f04;
+        text-shadow:1px 1px #ffcd49;
+      }
+      
+      .border {
+        border-image-slice: 29 26 29 26;
+        border-image-width: 27px 27px 27px 27px;
+        border-image-outset: 12.5px 14px;
+        border-image-repeat: stretch stretch;
+        border-image-source: url("border.png");
+        border-style: solid; 
+        box-sizing:border-box;
+      }
+      h1 {
+        margin:0px;
+        font-size:32px;
+        font-family:inky;
+      }
+      .notice p {
+        font-size:16px;
+        font-family:squim;
+      }
+      .chara {
+        width:96px;
+        height:96px;
+      filter: drop-shadow(2px 2px #2B395E);
+      transition:0.2s;
+      position:relative;
+        
+      }
+      .chara:hover {
+        width:96px;
+        height:96px;
+      filter: drop-shadow(14px 14px #1E0939);
+      transition:0.2s;
+      
+      position:relative;
+      top:-10px;
+      left:-10px;
+      }
+      .border:hover {
+        border-image-slice: 29 26 29 26;
+        border-image-width: 27px 27px 27px 27px;
+        border-image-outset: 12.5px 14px;
+        border-image-repeat: stretch stretch;
+        border-image-source: url("border.gif");
+        border-style: solid; 
+        box-sizing:border-box;
+      }
+      #main {
+        display:flex;
+  flex-wrap: wrap;
+        gap:20px 40px;
+        width:370px;
+        height:340px;
+        justify-content:center;
+      }
+      #main div {
+        position:relative;
+      }
+      .name {
+        background-color:#1F4A9B;
+        font-family:inky;
+        font-size:32px;
+        margin-top:12px;
+        height:38px;
+        color:white;
+        text-shadow:2px 2px #2B395E;
+      }
+      .chara:hover + .name {
+        color:yellow;
+        animation:0.1s linear infinite flash;
+      }
+      @keyframes flash {
+        0% {
+          color:white;
+        }
+        100% {
+          color:yellow;
+        }
+      }
+      </style>
+</head>
+<body>
+<div class="container"><center>
+    <br><br>
+    <img src="furs.png">
+    <br>
+    <img src="select.png">
+    <br>
+    <br>
+    <div id="main">
+      <div>
+        <img class="chara border" src="renard.png">
+        <div class="name">RENARD</div>
+      </div>
+      <div>
+        <img class="chara border" src="tqbf.png">
+        <div class="name">TQBF</div>
+      </div>
+      <div>
+        <img class="chara border" src="darius.png">
+        <div class="name">DARIUS</div>
+      </div>
+      <div>
+        <img class="chara border" src="josh.png" title="wait... what do you mean he doesn't go by Kitsune²? Who is Kay..? What do you mean im misgendering him... No I'm not.? Where's Josh...????">
+        <div class="name">KITSUNE ^2</div>
+      </div>
+      <div>
+        <img class="chara border" src="bandetto.png">
+        <div class="name">BANDETTO</div>
+      </div>
+    </div>
+    <a href="/fun/index.html"><img title="BACK TO MAIN" src="back1.png" onmouseout="this.src='back1.png'" onmouseover="this.src='back2.png'" style="margin-top:5px;margin-bottom:5px"></a>
+    <div class="notice border">
+      <h1>BUT WAIT!!!! what is this?</h1>
+      <p>first off, thanks for giving a damn!</p>
+      <p>youre in my halley labs, or more commonly known as lapfox, shrine. halley labs is a project by a musician that uses multiple different aliases for different genres of music they produce! yay! thats it! did i mention theyre furries?</p>
+      <p>a lot of em essex' older works have inspired me to create music, and this page is a tribute to their work. you will find pages deticated to my favorite aliases they've created, listed above! whenever i do them. &hearts; &sung; &hearts;</p>
+      
+    </div>
+    <br>
+  <audio src="mm8s.opus" loop controls autoplay></audio>
+  <p class="credits">
+     Music from <a href="https://www.youtube.com/watch?v=ZWikJf6Dcqw">Rockman 8</a>. Characters, graphics, layout design by <a href="https://msx.horse">em essex</a>.
+  </p>
+  </center>
+  </div>
+  <script>
+    
+const charaElements = document.querySelectorAll('.chara');
+const audio = new Audio('nav.ogg');
+
+charaElements.forEach(chara => {
+    chara.addEventListener('mouseenter', () => {
+        audio.currentTime = 0; // Reset audio to start
+        audio.play();
+    });
+
+    chara.addEventListener('mouseleave', () => {
+        audio.pause();
+    });
+});
+  </script>
+</body>
+</html>

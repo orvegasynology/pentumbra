@@ -1,0 +1,121 @@
+
+@font-face {
+    font-family: ibmcga2y;
+    src: url("/data/font/bitmap/ibmcga2y.woff") format("woff");
+}
+@font-face {
+    font-family: basiic; src: url("/data/font/bitmap/basiic.woff") format("woff");
+}
+@font-face {
+  src: url("/data/font/bitmap/gasfont.woff") format("woff");
+  font-family: giygas;
+}
+@font-face {
+  src: url("/data/font/bitmap/ebmain.woff") format("woff");;
+  font-family: ebmain;
+}
+@font-face {
+    font-family: vcrosd;
+    src: url("/data/font/bitmap/VCR_OSD_MONO_1.001.ttf")
+  }
+@font-face {
+    font-family: squim;
+    src: url("/data/font/bitmap/SquimFont.ttf")
+  }
+@font-face {
+    font-family: tairo;
+    src: url("/data/font/bitmap/Tairo.ttf")
+  }
+@font-face {
+    font-family: basis;
+    src: url("/data/font/bitmap/basis33.ttf")
+  }
+@font-face {
+    font-family: bmcor;
+    src: url("/data/font/bitmap/BMcorrode.TTF")
+  }
+@font-face {
+    font-family: cenios;
+    src: url("/data/font/bitmap/CeniosPixelDemoRegular.otf")
+  }
+@font-face {
+    font-family: crang;
+    src: url("/data/font/bitmap/Crang.ttf")
+  }
+@font-face {
+    font-family: gameover;
+    src: url("/data/font/bitmap/gameovercre1.ttf")
+  }
+@font-face {
+    font-family: inky;
+    src: url("/data/font/bitmap/Inky%20Thin%20Pixels.ttf")
+  }
+@font-face {
+    font-family: lightpix;
+    src: url("/data/font/bitmap/light_pixel-7.ttf")
+  }
+
+@font-face {
+  src: url("/data/font/bitmap/Pixel-lcd-machine.ttf");
+  font-family: pixellcd;
+}
+@font-face {
+  src: url("/data/font/bitmap/PressStart2P.ttf");
+  font-family: pressstart;
+}
+@font-face {
+  src: url("/data/font/bitmap/tama_mini02.TTF");
+  font-family: tamamini;
+}
+/*add fonts to fonts page*/
+@font-face {
+  src: url("/data/font/bitmap/bluescreen.ttf");
+  font-family: bluescreen;
+}
+@font-face {
+  src: url("/data/font/bitmap/BlondenPixel.otf");
+  font-family: blonden;
+}
+@font-face {
+  src: url("/data/font/bitmap/Pixelscapes.ttf");
+  font-family: pixelscapes;
+}
+@font-face {
+  src: url("/data/font/bitmap/Italipixel.ttf");
+  font-family: itali;
+}
+@font-face {
+  src: url("/data/font/bitmap/Mespix.otf");
+  font-family: mespix;
+}
+
+/*Add MORE fonts to fonts page. wow*/
+
+@font-face {
+  src: url("/data/font/bitmap/Pixelon.ttf");
+  font-family: pixelon;
+}
+@font-face {
+  src: url("/data/font/bitmap/PixelArmy.ttf");
+  font-family: pixarm;
+}
+@font-face {
+  src: url("/data/font/bitmap/origa___.ttf");
+  font-family: origamimommy;
+}
+@font-face {
+  src: url("/data/font/bitmap/Kemco Pixel Bold.ttf");
+  font-family: Kemco;
+}
+@font-face {
+  src: url("/data/font/bitmap/BitPap.ttf");
+  font-family: Bitpap;
+}
+@font-face {
+  src: url("/data/font/bitmap/ANTICLIMAX.TTF");
+  font-family: anticlimax; /*sex phobic? cum phobic?*/
+}
+@font-face {
+  src: url("/data/font/bitmap/Gabato.ttf");
+  font-family: gabato;
+}

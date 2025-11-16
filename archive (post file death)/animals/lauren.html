@@ -1,0 +1,170 @@
+<!-- if you come here to mooch off of code be my guest. Do it. just dont steal graphics. All graphics on this page belong to ME.-->
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / Laur</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    <script src="/scripts/playlist.js"></script>
+    <style>
+      body {
+        width:300px;
+        margin-left:auto;
+        margin-right:auto;
+        font-family:ebmain;
+        font-size:16px;
+        text-align:center;
+        line-height:12px;
+      }
+      ul {
+        margin:3px;
+        padding:6px;
+        list-style-type:none;
+        text-align:right;
+        border:1px solid black;
+      }
+      audio {
+        height:20px;
+        width:100%;
+      }
+      .active {
+        text-decoration:underline;
+      }
+      audio::-webkit-media-controls-panel {
+        background-color:white;
+        border:1px solid black;
+        border-radius:0px;
+      }
+      .wtf {
+        border:1px solid black;
+        padding:2px;
+        text-align:left;
+      }
+      p {
+        margin:2px;
+      }
+      img {
+        cursor:help;
+      }
+.tooltip {
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  text-align: center;
+  position: absolute;
+  left:-300px;
+  z-index: 1;
+  opacity: 0;
+  width:120px;
+  border:1px solid black;
+  padding:2px;
+}
+
+    </style>
+<body>
+  <p style="text-align:left">lauren <span style="float:right"><a href="/home.html">or go home</a></span></p>
+  <div class="flex" style="width:100px">
+    <div>
+    <ul id="playlist">
+        <li title="Deltarune" data-src="/audio/delta/dialtone-toby-fox.mp3">dialtone</li>
+        <li title="Greenhouse" data-src="/audio/halley/ink1-halley-labs.mp3">ink1</li>
+        <li title="Greenhouse" data-src="/audio/halley/mantis-halley-labs.mp3">mantis</li>
+        <li title="Greenhouse" data-src="/audio/halley/05%20harvestman.mp3">harvestman</li>
+        <li title="Greenhouse" data-src="/audio/halley/08%20tace%C5%8D.mp3">taceo</li>
+        <li title="Venetian Snares" data-src="/audio/etc/nepetalactone-venetian-snares.mp3">Nepetalactone</li>
+        <li title="Venetian Snares" data-src="/audio/etc/kakenrooken-stivlobits-venetian-snares.mp3">Kakenrooken Stivlobits</li>
+            </ul>
+    <p><audio id="audioPlayer" controls></audio></p>
+    </div>
+    <div>
+      <img style="width:200px;margin-left:40px" src="/data/assets/oc/lauren/dance.gif" onmouseover="Tip(event, 'he like to danc')">
+    </div>
+  </div>
+  <p>
+    <img  onmouseover="Tip(event, 'this means he shouldnt be drawn with any other expression that does not resemble a smile. lauren does not experience emotion.')" onmouseout="UnTip()"
+      src="/data/assets/oc/lauren/happiness.gif">
+  </p>
+  <div class="wtf">
+    <p>lauren is a <span id="int">??</span> year old guy who likes drinking milk. and no, he's not a cat, nor feline. nor canine. or really anything. it's unsure what he is in viviennes dream world. he addresses himself as a human being, though clearly not the case.</p>
+    <p>he is a happy go-lucky fella who gets overstimulated quite easily. he wants to be a friend to all, and will not stop until he gets what he wants. avid liar, is his name even lauren?</p>
+    <p>- he french boy (insult)</p>
+  </div>
+  <p>
+    <img src="/data/assets/oc/lauren/ref.gif" onmouseout="this.src='/data/assets/oc/lauren/ref.gif'" onmouseover="this.src='/data/assets/oc/lauren/ref2.gif'">
+  </p>
+  <div class="wtf">
+    <p>during the times he gets overstimulated, he often gets a headache. these headaches are visualized as an explosion of bright colors.</p>
+  </div>
+ <p>
+    <img src="/data/assets/oc/lauren/owie.gif">
+  </p>
+    <script>
+        function generateRandomInteger() {
+            const randomInt = Math.floor(Math.random() * (44 - 25 + 1)) + 25;
+            document.getElementById('int').textContent = randomInt;
+        }
+        setInterval(generateRandomInteger, 100);
+    </script>
+    <script>
+      //following code from https://theabsoluterealm.com
+      var tooltip;
+var hideTimeout;
+var showTimeout;
+var isTooltipActive = false;
+
+function createTooltipIfNotExist() {
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.classList.add("tooltip");
+    document.body.appendChild(tooltip);
+  }
+}
+
+function updateTooltipPosition(event) {
+  var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+  var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  tooltip.style.left = event.clientX + scrollX + 15 + "px";
+  tooltip.style.top = event.clientY + scrollY + 15 + "px";
+}
+
+function Tip(event, content) {
+  clearTimeout(hideTimeout);
+  clearTimeout(showTimeout);
+  isTooltipActive = true;
+
+  showTimeout = setTimeout(function () {
+    if (isTooltipActive) {
+      createTooltipIfNotExist();
+      tooltip.innerHTML = content;
+      updateTooltipPosition(event);
+
+      tooltip.style.visibility = "visible";
+      tooltip.style.opacity = "1";
+    }
+  }, 0);
+
+  event.target.addEventListener("mousemove", updateTooltipPosition);
+  event.target.addEventListener("mouseout", UnTip);
+}
+
+function UnTip() {
+  clearTimeout(showTimeout);
+  isTooltipActive = false;
+  tooltip.style.opacity = "0";
+  hideTimeout = setTimeout(function () {
+    if (!isTooltipActive) {
+      tooltip.style.visibility = "hidden";
+    }
+  }, 0);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  createTooltipIfNotExist();
+});
+    </script>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pix/smiley1.gif" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calander</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css">
+    <style>
+        body {
+            background-color:#141414;
+            background-image:url("/data/assets/grounds/fake-brick.png");
+            overflow:none;
+            margin-left:2px;
+        }
+        #calendar {
+            width: 200px;
+        }
+        h2 {
+            text-align: center;
+            font-family: ibmcga2y;
+            font-weight: normal;
+        }
+        table {
+            width: 196px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            color:white;
+            background-color:black
+        }
+        th, td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid white;
+            color:white;
+        }
+        td {
+            margin:1px
+          }
+        .highlight {
+            color: red;
+        }
+        .lupercalia, .hexennacht, .unveiling-day, .halloween, .birthday, .sol-invictus {
+          font-size:0px;
+          }
+        .halloween::before {
+          content:url("/data/assets/pix/pump.gif");
+          color:white;
+          }
+        .birthday::before {
+          content:url("/data/assets/pix/27287409.gif");
+          color:white
+          }
+        .sol-invictus::before {
+          content:url("/data/assets/pix/1789353a.gif");
+          color:white
+          }
+        .lupercalia::before {
+          content:url("/data/assets/pix/29bf4fca.gif");
+          color:white
+          }
+        .hexennacht::before {
+          content:url("/data/assets/pix/50f3856d.gif");
+          color:white
+          }
+        .hexennacht {
+          background-color:rgba(255, 255, 255, 0.2)
+          }
+        .unveiling-day::before {
+          content:url("/data/assets/pix/f5defa51.gif");
+          color:white
+          }
+    </style>
+</head>
+<body>
+    <div id="calendar"></div>
+    <script src="/scripts/calendar.js">
+    </script>
+</body>
+</html>

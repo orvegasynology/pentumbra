@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<!--<?xml-stylesheet href="/stylesheets/main.css"?>-->
+<channel>
+<title>PENTUMBRA</title>
+<link>https://pentumbra.neocities.org</link>      
+
+<description>PENTUMBRAs site updates. </description>
+<item>
+<title> A few tings have happened,</title>
+<pubDate>Tue, 31 Dec 2024 23:52:00 EST</pubDate>
+<description>happy new year! new resources page, new character directory, new gallery that i forgot to document, unless i did in which case it belongs in the rss feed too. how cool
+</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+
+<item>
+<title> NEW INDEX!!!!!!!!!!!!!!!!!</title>
+<pubDate>Mon, 12 Dec 2024 20:01:00 EST</pubDate>
+<description> WOOOOOUUUUUGH!!!!!!!!!!! SPENT 2 WEEKS ON THIS MOFO. u can still find the old index at /old/indexv1.html :)
+</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+<item>
+<title>Music Page.</title>
+<pubDate>Tue, 12 Nov 2024 12:19:00 EST</pubDate>
+<description>I created a music page for my music and favorite albums. I also redid the webmaster page.
+</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+<item>
+<title>Reigen.</title>
+<pubDate>Fri, 1 Nov 2024 11:11:00 EST</pubDate>
+<description>Reigen shrine.
+</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+<item>
+<title>A Toybox.</title>
+<pubDate>Mon, 28 Oct 2024 11:11:00 EST</pubDate>
+<description>Toybox.html was created! I also changed the directory of files, so feel free to hotlink (though, its reccommended that you don't).
+</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+<item>
+<title>Blog!</title>
+<pubDate>Fri, 11 Oct 2024 10:28:00 EST</pubDate>
+<description>I forgot to add to the feed so im an hour late, sorry! I'm gonna add an rss feed to it in a few hours, but I started a blog to keep up with my mood for my therapist, and to share my scripts and other brainrot. It's kind of plain right now, but I've completed one article on the little music player i coded.
+</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+<item>
+<title>Splash Page</title>
+<pubDate>Fri, 14 Oct 2024 9:40:00 EST</pubDate>
+<description>Created a splash page. I'm gonna miss the index showing up but id rather not make webring surfers eyes hurt ;w;.
+</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+<item>
+<title>New About Page</title>
+<pubDate>Mon, 30 Sep 2024 8:50:00 EST</pubDate>
+<description>As the title reads i FINALLY started on my about page... like, about me, HQ. Hi. Also, I've started working redoing my resources page, because im not digging the previous theme anymore (which i created ~September last year). I will put its directory on my navbar, but just note it doesn't have css, so its just plain HTML lol</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+<item>
+<title>New RSS Feed!</title>
+<pubDate>Wed, 25 Sep 2024 12:35:00 EST</pubDate>
+<description>Hello world! I created an RSS feed, to alert those (who want it) of site updates. - I also created a buttonwall, and added a ton of graphics and EVEN MORE webrings. nice.</description>
+<webMaster>hqpentumbras@gmail.com</webMaster>
+</item>
+</channel>
+</rss>      

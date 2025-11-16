@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BLOG POST / TUTORIAL</title>
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <link href="/stylesheets/prism.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/stylesheets/pagesheets/post.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/stylesheets/font-bitmap.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/scripts/playlist.js"></script>
+    <script src="/scripts/prism.js"></script>
+    <script src="/scripts/bg.js"></script>
+    <style>
+      .active {
+        color:purple
+      }
+    </style>
+  </head>
+  <body>
+      <h1>My super simple playlist script. ~Oct 9th - Oct 13th</h1>
+      <a href="/blog/tutorials/player.html" target="blank_">view in full?</a>
+      <p>inspired of the simplistic design of <a href="https://msx.horse/aminals/nitro/">msx'</a> character playlists, i decided to create a fairly simple to use and create a playlist using data from an unordered list.</p>
+      <p>it includes...</p>
+      <ul>
+          <li>highlighting what song is currently playing using a class called <code>active</code>.</li>
+          <li>automatically playing the next song after one is complete, though not required.</li>
+          <li>full customization (with the prebuilt <code>un/ordered list</code> and <code>audio</code> of course).</li>
+      <p>it does not include, but may in the future...</p>
+          <li>a shuffle toggle.</li>
+          <li>loop functionality. (it may actually work, i just dont care enough to test it.)</li>
+      </ul>
+      <p>this is the javascript that should either be in a <code>script</code> tag or a javascript file.</p>
+<pre>
+
+      <code>
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all playlist items and the audio player
+    const playlistItems = document.querySelectorAll('#playlist li');
+    const audioPlayer = document.getElementById('audioPlayer');
+    let currentSong = null; // Track the currently playing song
+
+    // Add click event to each playlist item
+    playlistItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const source = this.getAttribute('data-src'); // Get the audio source from the clicked item
+
+            // Check if the clicked song is different from the current one
+            if (currentSong !== source) {
+                // Pause the current song if there is one
+                if (currentSong) {
+                    audioPlayer.pause();
+                    document.querySelector('.active')?.classList.remove('active'); // Remove active class from the previous song
+                }
+                audioPlayer.src = source; // Set the new song source
+                audioPlayer.play();
+                currentSong = source; // Update the current song
+                this.classList.add('active'); // Highlight the currently playing song
+            } else {
+                // If the same song is clicked, pause it
+                audioPlayer.pause();
+                currentSong = null; // Reset current song
+                this.classList.remove('active'); // Remove active class
+            }
+        });
+    });
+
+    // When the audio ends, play the next song
+    audioPlayer.addEventListener('ended', function() {
+        let nextSong = getNextSong(); // Get the next song
+        if (nextSong) {
+            audioPlayer.src = nextSong.getAttribute('data-src'); // Set the next song source
+            audioPlayer.play();
+            document.querySelector('.active')?.classList.remove('active'); // Remove active class from the current song
+            nextSong.classList.add('active'); // Highlight the next song
+            currentSong = nextSong.getAttribute('data-src'); // Update current song
+        }
+    });
+
+    // Function to get the next song in the playlist.
+    function getNextSong() {
+        let currentIndex = Array.from(playlistItems).findIndex(item => item.getAttribute('data-src') === currentSong); // Find the index of the current song
+        let nextIndex = (currentIndex + 1) % playlistItems.length; // Calculate the next index
+        return playlistItems[nextIndex]; // Return the next song
+    }
+});
+      </code>
+</pre>
+<p>an example of how the playlist works in its simplest form (the purple highlighting being the <code>active</code> class being applied.)</p>
+    <ul id="playlist">
+        <li data-src="https://files.catbox.moe/8qsue3.mp3">heavens night</li>
+        <li data-src="https://files.catbox.moe/o4xs6r.mp3">alone in the town</li>
+        </ul>
+    <audio id="audioPlayer" controls></audio>
+<p>With this, you can customize it to your liking! the player is called with an id <code>audioPlayer</code> (case sensitive), the playlist (unordered or ordered list) is called with an id <code>playlist</code>, and the sources for where the audio comes from is <code>data-src="yoururl"</code> inside of the <code>li</code> tag. in other words, your code should look like...</p>
+<pre>
+    <code>
+       &lt;ul id="playlist"&gt;
+         &lt;li data-src="URL"&gt; song title &lt;/li&gt;
+         &lt;li data-src="URL"&gt; song title &lt;/li&gt;
+      &lt;/ul&gt;
+      
+    &lt;audio id="audioPlayer" controls&gt;&lt;/audio&gt;
+    &lt;!-- remove controls, add autoplay, and or a source to the audio tag if needed. not sure how loop would work. --&gt;
+    
+    &lt;script&gt;
+        . . .
+    </code>
+</pre>
+<p>i would assume that you, the reader, already know how classes work. if you'd like, edit the <code>.active</code> class to your liking.</p>
+<p>directly crediting me is not necessary, however, if someone asks where you got the code, direct them to me.</p>
+<img src="/siggy.png">
+<p>questions or concerns? email me. hqpentumbras@gmail.com</p>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / Fonts </title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-serif.css" type="text/css">
+    <style>
+      hr {
+        border:1px solid blue;
+      }
+      * {
+        color:darkblue;
+      }
+    </style>
+</head>
+<body>
+    <div id="font-container"></div>
+
+    <script>
+        const fonts = [
+            {
+                title: "Basiic",
+                type: "Pixelated",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/basiic.woff",
+                source: "https://cinni.net/font",
+                alphabet: "latin",
+            },
+            {
+                title: "Ibmcga2y",
+                type: "Pixelated",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/ibmcga2y.woff",
+                source: "https://int10h.org/oldschool-pc-fonts/fontlist/font?ibm_cga-2y",
+                alphabet: "latin",
+            },
+            {
+                title: "EBMain",
+                type: "Pixelated",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/ebmain.woff",
+                source: "",
+                alphabet: "latin",
+            },
+            {
+                title: "VCR OSD Mono",
+                type: "Pixelated",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/VCR_OSD_MONO_1.001.ttf",
+                source: "https://www.dafont.com/vcr-osd-mono.font",
+                alphabet: "latin",
+            },
+            {
+                title: "Squim",
+                type: "Pixelated",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/SquimFont.ttf",
+                source: "https://www.dafont.com/squimfont.font",
+                alphabet: "latin",
+            },
+            {
+                title: "Tairo",
+                type: "Pixelated",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/Tairo.ttf",
+                source: "https://www.dafont.com/tairo.font",
+                alphabet: "latin",
+            },
+            {
+                title: "Basis33",
+                type: "Pixelated and Monospaced",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/basis33.ttf",
+                source: "https://www.dafont.com/basis33.font",
+                alphabet: "latin, cyrillic",
+            },
+            {
+                title: "BM Corrode",
+                type: "Pixelated and probably Monospaced",
+                bestsize: "14",
+                size: "28",
+                src: "/data/font/bitmap/BMcorrode.TTF",
+                source: "https://www.dafont.com/bm-corrode.font",
+                alphabet: "latin",
+            },
+            {
+                title: "Cenios",
+                type: "Pixelated and probably Monospaced",
+                bestsize: "16",
+                additional: "symbols and numbers not supported.",
+                size: "32",
+                src: "/data/font/bitmap/CeniosPixelDemoRegular.otf",
+                source: "https://befonts.com/cenios-pixel-font.html",
+                alphabet: "latin",
+            },
+            {
+                title: "Crang",
+                type: "Pixelated",
+                bestsize: "18",
+                size: "36",
+                src: "/data/font/bitmap/Crang.ttf",
+                source: "https://www.dafont.com/crang.font",
+                alphabet: "latin",
+            },
+             {   title: "Game Over Cre",
+                type: "Pixelated and Monospaced",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/gameovercre1.ttf",
+                source: "https://www.dafont.com/game-over-cre.font",
+                alphabet: "latin"
+            },
+             {   title: "Inky Thin Pixels",
+                type: "Pixelated",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/Inky%20Thin%20Pixels.ttf",
+                source: "https://www.dafont.com/inky-thin-pixels.font",
+                alphabet: "latin"
+            },
+             {   title: "Light Pixel",
+                type: "Pixelated",
+                bestsize: "14",
+                size: "28",
+                src: "/data/font/bitmap/light_pixel-7.ttf",
+                source: "https://www.dafont.com/light-pixel-7.font",
+                alphabet: "latin"
+            },
+             {   title: "Pixel LCD Machine",
+                type: "EXTREMELY Pixelated",
+                bestsize: "8",
+                size: "16",
+                additional: "is extremely unreadable, wouldnt reccommend.",
+                src: "/data/font/bitmap/Pixel-lcd-machine.ttf",
+                source: "https://www.dafont.com/pixel-lcd-machine.font",
+                alphabet: "latin",
+            },
+             {   title: "Press Start",
+                type: "Pixelated and Monospaced",
+                bestsize: "16",
+                size: "32",
+                src: "/data/font/bitmap/PressStart2P.ttf",
+                source: "https://fonts.google.com/specimen/Press+Start+2P",
+                alphabet: "latin, cyrillic",
+            },
+             {   title: "Tama Mini",
+                type: "Pixelated",
+                bestsize: "6",
+                size: "18",
+                src: "/data/font/bitmap/tama_mini02.TTF",
+                source: "https://www.dafont.com/tama-mini02.font",
+                alphabet: "latin",
+            },
+             {   title: "Daruma Drop One",
+                type: "Normal",
+                bestsize: "24",
+                size: "24",
+                src: "/data/font/serif/DarumaDropOne-Regular.ttf",
+                source: "https://www.dafont.com/pixel-lcd-machine.font",
+                alphabet: "latin, japanese",
+            },
+             {   title: "Mochiy Pop One",
+                type: "Normal",
+                bestsize: "24",
+                size: "24",
+                src: "/data/font/serif/MochiyPopOne-Regular.ttf",
+                source: "https://fonts.google.com/specimen/Mochiy+Pop+One",
+                alphabet: "latin, japanese",
+            },
+             {   title: "Tetsubin Gothic",
+                type: "Normal",
+                bestsize: "24",
+                size: "24",
+                src: "/data/font/serif/tetsubin-gothic.otf",
+                source: "https://www.freejapanesefont.com/tetsubin-gothic-download/",
+                alphabet: "latin, japanese",
+            }
+            ];
+
+        fonts.sort((a, b) => a.title.localeCompare(b.title));
+
+        fonts.forEach(font => {
+            const fontFace = new FontFace(font.title, `url(${font.src})`);
+            document.fonts.add(fontFace);
+            fontFace.load().then(() => {
+                const fontItem = document.createElement('div');
+                fontItem.className = 'font-item';
+                fontItem.style.fontFamily = font.title === "Pixel LCD Machine" ? "Arial" : font.title;
+
+                const latinCharacters = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z";
+                const cyrillicCharacters = "<br>А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я";
+                const japaneseCharacters = `
+<br>これは今もっともこんな抑圧めという事のためを申しですらしく。いよいよほかに沙汰観もどうしてもその膨脹でですほどが終といですにも安心触れですたながら、全くには来ますでございない
+                `;
+
+fontItem.innerHTML = `
+<div>
+    <h2 style="font-size:${font.size}px">${font.title}. ${font.type} font, obviously. Looks best at ${font.bestsize}px (and multiples of ${font.bestsize}). ${font.additional ? `(${font.additional})` : ''}</h2>
+    <p style="font-size:${font.title === "Pixel LCD Machine" ? "32px" : font.bestsize + "px"}; font-family:${font.title === "Pixel LCD Machine" ? "Pixel LCD Machine" : "inherit"};">0 1 2 3 4 5 6 7 8 9 ! ? @ # $ % ^ & * ( ) = + < > <br>
+    ${font.alphabet.includes('latin') ? latinCharacters : ''} 
+    ${font.alphabet.includes('cyrillic') ? cyrillicCharacters : ''} 
+    ${font.alphabet.includes('japanese') ? japaneseCharacters : ''}</p>
+    <p style="font-size:${font.size}px"><a href="${font.src}" download>Download</a> ${font.source ? `<a href="${font.source}">Credit</a>` : '<strike>Credit</strike> lol lost the source mb.'}</p>
+    <hr>
+</div>
+`;
+
+                document.getElementById('font-container').appendChild(fontItem);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!-- if you come here to mooch off of code be my guest. just dont steal graphics. if you wanna know where i found something, email me!-->
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / RESOURCES</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/pagesheets/materials.css" type="text/css">
+    <link rel="preload" href="/stylesheets/font-serif.css" as="style">
+    <link rel="stylesheet" href="/stylesheets/font-serif.css" type="text/css">
+</head>
+<body>
+  <audio loop autoplay src="/music/deltarune/Ferris Wheel (1).wav"></audio>
+  <div class="space"></div>
+  <div class="body">
+    <div class="header">
+      <h1><span  style="color:#f04744">マ</span>
+      <span style="color:#ff9843">チ</span>
+      <span style="color:#ffe543">エ</span>
+      <span style="color:#65ff43">ー</span>
+      <span style="color:#2edacd">ル</span></h1>
+      <h2>the resources and materials page woooo yeah</h2>
+    </div>
+    <div class="bodyfrfr">
+    <div class="sitenav">
+      <ul >
+        <li><a class="r" style="color:darkblue" href="/index.html">index</a></li>
+        <li><a class="o" href="/webmaster/index.html">abt</a></li>
+        <li><a class="y" href="/art/index.html">gallery</a></li>
+        <li><a class="g" href="/buttonwall.html">buttonwall</a></li>
+        <li><a class="b" href="/resources.html">resources</a></li>
+        <li><a class="i" style="color:darkblue" href="/sitemap.html">sitemap</a></li>
+      </ul>
+    </div>
+    <div class="flex">
+      <div class="nav">
+        <ul id="linkList">
+        <p>other sources</p>
+        <li><a href="/resources/resources.html">initial</a></li>
+        <p>from pentumbra</p>
+        <li><a href="/resources/fonts.html">fonts</a></li>
+        </ul>
+        <marquee>&sung; ferris wheel (toby fox) cover by me :D</marquee>
+      </div>
+      <div class="content">
+        <iframe  id="iframe" src="resources.html"></iframe>
+      </div>
+    </div>      
+    </div>
+    <p>pentumbra.space</p>
+    </div>
+<script src="/scripts/snow_stars.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('#linkList a');
+            const iframe = document.getElementById('iframe');
+
+            // Load the first link into the iframe
+            if (links.length > 0) {
+                iframe.src = links[0].href;
+            }
+
+            // Add click event to each link
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    iframe.src = this.href; // Set iframe source to the clicked link
+                });
+            });
+        });
+    </script>
+</body>
+</html>

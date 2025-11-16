@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pix/smiley1.gif" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calander</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css">
+        <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+    <script>
+      window.addEventListener("load", (event) => {
+  new cursoreffects.ghostCursor();
+});
+    </script>
+
+    <style>
+        body {
+            overflow:hidden;
+            margin-left:-1px;
+            margin-top:-3px;
+            color:black;
+        }
+        #calendar {
+            width: 190px;
+        }
+        h2 {
+            text-align: center;
+            margin:0px;
+            font-weight: bold;
+            background-color:red;
+            color:white;
+            width:calc(100% + 6px);
+            border-bottom:1px solid black;
+        }
+        table {
+            width: 196px;
+
+            color:black;
+            background-color:white
+        }
+        th, td {
+            width: 12px;
+            height: 14px;
+            text-align: center;
+            border: 1px solid black;
+            color:black;
+            font-size:10px;
+        }
+        td {
+            margin:1px;
+          }
+        .highlight {
+            color: blue;
+        }
+        .lupercalia, .hexennacht, .unveiling-day, .halloween, .birthday, .sol-invictus {
+          font-size:0px;
+          width:12px;
+          height:12px;
+          }
+        .halloween::before {
+          content:url("/data/assets/pix/pump.gif");
+          color:white;
+          }
+        .birthday::before {
+          content:url("/data/assets/pix/27287409.gif");
+          color:white
+          }
+        .sol-invictus::before {
+          content:url("/data/assets/pix/1789353a.gif");
+          color:white
+          }
+        .lupercalia::before {
+          content:url("/data/assets/pix/29bf4fca.gif");
+          color:white
+          }
+        .hexennacht::before {
+          content:url("/data/assets/pix/50f3856d.gif");
+          color:white
+          }
+        .hexennacht {
+          background-color:rgba(255, 255, 255, 0.2)
+          }
+        .unveiling-day::before {
+          content:url("/data/assets/pix/f5defa51.gif");
+          color:white
+          }
+    </style>
+</head>
+<body>
+    <div id="calendar"></div>
+    <script>        const holidays = {
+            '2-15': 'lupercalia',
+            '4-30': 'hexennacht',
+            '7-25': 'unveiling-day',
+            '10-31': 'halloween',
+            '10-7': 'birthday',
+            '12-25': 'sol-invictus'
+        };
+
+        const holidayNames = {
+            'lupercalia': 'Lupercalia',
+            'hexennacht': 'Hexennacht',
+            'unveiling-day': 'Unveiling Day',
+            'halloween': 'Halloween',
+            'birthday': 'Birthday',
+            'sol-invictus': 'Sol Invictus'
+        };
+
+        function createCalendar(year, month) {
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            const firstDay = new Date(year, month, 1);
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            let calendarHTML = `<h2>${monthNames[month]} ${year}</h2><table><tr>`;
+
+            // Days of the week
+            ['S', 'M', 'T', 'W', 'TH', 'F', 'S'].forEach(day => {
+                calendarHTML += `<th style="border:none">${day}</th>`;
+            });
+            calendarHTML += `</tr><tr>`;
+
+            // Fill in the days
+            for (let i = 0; i < firstDay.getDay(); i++) {
+                calendarHTML += `<td></td>`;
+            }
+            for (let day = 1; day <= daysInMonth; day++) {
+                const today = new Date();
+                const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === day;
+                const holidayClass = holidays[`${month + 1}-${day}`] || '';
+                const holidayTitle = holidayNames[holidayClass] ? `title="${holidayNames[holidayClass]}"` : '';
+                calendarHTML += `<td class="${isToday ? 'highlight' : ''} ${holidayClass}" ${holidayTitle}>${day}</td>`;
+                if ((day + firstDay.getDay()) % 7 === 0) {
+                    calendarHTML += `</tr><tr>`;
+                }
+            }
+            calendarHTML += `</tr></table>`;
+            return calendarHTML;
+        }
+
+        let currentMonth = new Date().getMonth();
+        const currentYear = new Date().getFullYear();
+        document.getElementById('calendar').innerHTML = createCalendar(currentYear, currentMonth);
+
+
+
+        // Function to show next month
+        function showNextMonth() {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+            }
+            document.getElementById('calendar').innerHTML = createCalendar(currentYear, currentMonth);
+        }
+
+        // Automatically show next month every 5 seconds (for demonstration)
+        //setInterval(showNextMonth, 5000);</script>
+</body>
+</html>

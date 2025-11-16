@@ -1,0 +1,48 @@
+<!--ap computer science principals create task-->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / AP COMPUTER SCIENCE PRINCIPALS CREATE TASK</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+<body>
+    <h1>Weather Checker</h1>
+    <div> 
+        <button onclick="checkWeather('New York')">New York</button>
+        <button onclick="checkWeather('Los Angeles')"> Los Angeles</button>
+        <button onclick="checkWeather('Chicago')"> Chicago</button>
+        <button onclick="checkWeather('Houston')"> Houston</button>
+        <button onclick="checkWeather('Phoenix')"> Phoenix</button>
+        <button onclick="checkWeather('Miami')"> Miami </button>
+    </div>
+    <p id="output"></p>
+
+    <script>
+        const weatherData = [
+            { city: "New York", temperature: 75, condition: "Sunny" },
+            { city: "Los Angeles", temperature: 85, condition: "Sunny" },
+            { city: "Chicago", temperature: 60, condition: "Cloudy" },
+            { city: "Houston", temperature: 90, condition: "Rainy" },
+            { city: "Phoenix", temperature: 100, condition: "Sunny" }
+        ];
+
+        function getWeather(city) {
+            for (let i = 0; i < weatherData.length; i++) {
+                if (weatherData[i].city === city) {
+                    return `The weather in ${city} is ${weatherData[i].temperature}°F and ${weatherData[i].condition}.`;
+                }
+            }
+            return `Weather data for ${city} is not available.`;
+        }
+
+        function checkWeather(city) {
+            const result = getWeather(city);
+            document.getElementById('output').innerText = result;
+        }
+    </script>
+</body>
+</html>

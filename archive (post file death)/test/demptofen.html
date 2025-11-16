@@ -1,0 +1,81 @@
+<!-- if you come here to mooch off of code be my guest. just dont steal graphics. if you wanna know where i found something, ask! or if i made it then dont use it.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / Demptofen</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    <style>
+      .demptofen {
+        background-image:url("/data/art/cod/ride2.png");
+        width:537px;
+        height:405px;
+        background-size:100%;
+        position:relative;
+      }
+      #dempsey {
+        position:absolute;
+        top:20px;
+        left:50px;
+        height:60px;
+        width:120px;
+      }
+      #edward {
+        position:absolute;
+        top:70px;
+        left:360px;
+        height:100px;
+        width:120px;
+        overflow:auto;
+      }
+    </style>
+</head>
+<body>
+  <div class="demptofen">
+    <span id="dempsey"></span> 
+    <span id="edward"></span>
+  </div>
+  <script>
+        var eddie = [
+          "lobotomy",
+          "https://en.wikipedia.org/wiki/Lobotomy",
+          "do u like stars dempsey",
+          "hoooooooonk",
+          "does he know? does he know?",
+          "yayaya i am lorde yayaya",
+          "ich liebe you!!",
+          "the inner mechanisms of my mind are an enigma",
+          "youre so cute. i coudl put you in a box.",
+          "Can we honestly e date? You're so beautiful. You always make me laugh, you always make me smile. You literally make me want to become a better person.",
+            "such a strange creature!",
+        "my brain hurts but i think we fractured the timelines",
+          "wow i havent done that since 1921",
+          "insert literally any The Beatles song and its us.",
+          "Wenn ich mich in dich verliebt hätte würden Sie versprechen, wahr zu sein? und hilf mir zu verstehen? weil ich schon einmal verliebt war und ich fand, dass Liebe mehr war als nur händchen halten wenn ich dir mein He",
+          "insert literally any Of Montreal song and its us.",
+          "i dont understand you sometimes but i really like you",
+    ];
+
+        var dempsey = [
+          "no mames guey",
+          "i dont understand you sometimes but i really like you",
+          "i love this guy",
+          "i love him",
+          "*is infactuated with him*",
+          "does he mean to talk out loud",
+          "does he know? does he know?"
+    ];
+
+    document.querySelector("#dempsey").innerHTML =
+        dempsey[Math.floor(Math.random() * dempsey.length)];
+        
+    document.querySelector("#edward").innerHTML =
+        eddie[Math.floor(Math.random() * eddie.length)];
+//theres probably a smarter way to do this but idc blehhh :PPP
+  </script>
+</body>
+</html>

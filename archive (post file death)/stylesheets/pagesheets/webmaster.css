@@ -1,0 +1,62 @@
+body {
+  background-image:url("/data/assets/grounds/win.jpg");
+  width:800px;
+  position:relative;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+iframe {
+  border:1px solid #1f1b18;
+  width: calc(100% - 8px) /*prevent overflow*/;
+  height:100%;
+}
+.body {
+  width:800px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#a4dbaa;
+  border:1px solid #1f1b18;
+  height:900px;
+}
+.links {
+  border:1px solid black;
+  color:black;
+  background-color:white;
+  height:200px;
+  position:absolute;
+  top:200px;
+  left:-110px;
+  list-style-type:none;
+  margin:0px;
+  width:90px;
+  padding:5px;
+}
+.dead {
+text-decoration: line-through;
+}
+.nav {
+  width:175px;
+background-image: linear-gradient(45deg, #e69ae0 25%, #eda5d5 25%, #eda5d5 50%, #e69ae0 50%, #e69ae0 75%, #eda5d5 75%, #eda5d5 100%);
+background-size: 5.66px 5.66px;
+margin:5px;
+height:890px;
+}
+tr {
+    width:175px;
+}
+a {
+  color:inherit;
+}
+.info {
+  background-color: rgba(201, 107, 179, 0.5);
+  font-weight:bold;
+  color:white;
+}
+.bodyer {
+  width:625px;
+height:890px;
+}
+.bod {
+  margin:10px;
+}

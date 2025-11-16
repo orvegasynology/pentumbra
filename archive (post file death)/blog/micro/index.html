@@ -1,0 +1,160 @@
+<!-- huuuguhghh/....-->
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / Microwave</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/pagesheets/micro.css" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="head">
+        <h1 id="wobble">MICROBLOG.</h1> 
+        <p> wow so cool. so kawaidesu. </p>
+    </div>
+    <div class="nav">
+      <ul>
+        <a href="/index.html"><li>home</li></a>
+        <a href="/webmaster/index.html"><li>webmaster</li></a>
+        <a href="/animals/index.html"><li>wiki</li></a>
+        <a href="/art/index.html"><li>gallery</li></a>
+        <a href="/resources/index.html"><li>resources</li></a>
+        <a href="/sitemap.html"><li>sitemap</li></a>
+        <li class="pentumbra"></li>
+      </ul>
+    </div>
+    <div class="flex">
+      <div class="main">
+        <iframe src="posts.html"></iframe>
+      </div>
+      <div class="bar">
+        <marquee id="phrase">hey! you there!</marquee>
+        <div class="etems">
+          <div class="info">
+            <div class="profile"></div>
+            <p>
+              <span id="user">@ </span><br>
+              <span class="userinf">∞ posts, <span id="followers">-2</span> followers, 2 following</span>
+            </p>
+            <button id="button">follow</button>
+            <hr>
+<p class="name">Ceramic Marxist Dolls</p>
+            <p class="mono">
+              Grant Curly took me to disney world and I threw up on his jacket<br>good morning neocitys!!<br>
+              song stuck in my head right now: <a href="https://www.youtube.com/watch?v=L8cCPH1qnYI" target="_blank">this one!!</a>
+            </p>
+            <p class="last">last seen: 2 seconds ago</p>
+            <hr>
+
+            <div class="thing">
+            <p class="last" style="opacity:1"><b>friends you may know:</b> kazuma kiryu, reigen arataka, grant curly</p>
+            <p class="last" style="opacity:1"><b>enemies you may know:</b> grant curly, james zare, gumball waterson, nepeta leijon</p>
+          </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+// <![CDATA[
+var speed=120; // speed of wobbling, lower is faster
+var height=2; // height of wobbling in pixels
+var alink=""; // page to link text to (set to ="" for no link)
+
+/****************************
+*    Wobbly Text Effect     *
+*(c) 2003-6 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var wobtxt, wobble, wobcnt=0;
+window.onload=function() { if (document.getElementById) {
+  var i, wobli;
+  wobble=document.getElementById("wobble");
+  wobtxt=wobble.firstChild.nodeValue;
+  while (wobble.childNodes.length) wobble.removeChild(wobble.childNodes[0]);
+  for (i=0; i<wobtxt.length; i++) {
+    wobli=document.createElement("span");
+    wobli.setAttribute("id", "wobb"+i);
+    wobli.style.position="relative";
+    wobli.appendChild(document.createTextNode(wobtxt.charAt(i)));
+    if (alink) {
+      wobli.style.cursor="pointer";
+      wobli.onclick=function() { top.location.href=alink; }
+    }
+    wobble.appendChild(wobli);
+  }
+  setInterval("wobbler()", speed);
+}}
+
+function wobbler() {
+  for (var i=0; i<wobtxt.length; i++) document.getElementById("wobb"+i).style.top=Math.round(height*Math.sin(i+wobcnt))+"px"
+  wobcnt++;
+}
+// ]]>
+</script>
+<script src="/scripts/phrasesv2.js"></script>
+<script>
+
+window.onload = function() {
+    const words = ["@reigenhater91", "@tsumihq", "@cor", "@imnotaacrook"];
+    const randomIndex = Math.floor(Math.random() * words.length);
+    document.getElementById("user").innerText = words[randomIndex];
+};
+
+</script>
+
+<script>
+const button = document.getElementById('button');
+const followers = document.getElementById('followers');
+let isFollowing = false;
+let hasUnfollowed = false;
+
+const savedState = JSON.parse(localStorage.getItem('followState')) || { isFollowing: false, hasUnfollowed: false };
+isFollowing = savedState.isFollowing;
+hasUnfollowed = savedState.hasUnfollowed;
+
+if (isFollowing && !hasUnfollowed) {
+    button.textContent = "Following";
+    followers.textContent = "5";
+} else if (hasUnfollowed) {
+    button.textContent = "Follow";
+    followers.textContent = "?";
+} else {
+    followers.textContent = "-63";
+}
+
+button.addEventListener('click', () => {
+    if (!isFollowing) {
+        alert("You followed the creature. Yay.");
+        button.textContent = "Following";
+        followers.textContent = "5";
+        isFollowing = true;
+    } else if (isFollowing && !hasUnfollowed) {
+        alert("You unfollowed? you asshole. do you know what you just unleashed?");
+        button.textContent = "Follow";
+        followers.textContent = "?";
+        hasUnfollowed = true;
+    } else {
+        alert("No turning back. I'm going to Jeff the kill you.");
+        button.textContent = "Follow";
+    }
+    
+    localStorage.setItem('followState', JSON.stringify({ isFollowing, hasUnfollowed }));
+});
+
+if (hasUnfollowed) {
+    button.textContent = "Follow";
+}
+//really hoping this works im not clearing my cache again
+</script>
+
+
+
+</body>
+</html>

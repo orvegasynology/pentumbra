@@ -1,0 +1,12 @@
+tr, td {
+  text-align:center;
+}
+        #container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .critter {
+            position: absolute;
+        }
+  

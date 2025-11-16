@@ -1,0 +1,175 @@
+// onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js (this one!), and onionring.css
+// it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+// it was originally made by joey + mord of allium (蒜) house, last updated 2020-11-24
+
+// === ONIONRING-VARIABLES ===
+//this file contains the stuff you edit to set up your specific webring
+
+//the full URLs of all the sites in the ring
+var sites = [
+    "https://evehibi.nekoweb.org",
+    "https://max.nekoweb.org",
+    "https://lessthanthree.online",
+    "https://corvidae.digital",
+    "https://lapislabel.net",
+    "https://felixfever.nekoweb.org",
+    "https://kasperspace.nekoweb.org",
+    "https://rstyxd.nekoweb.org",
+    "https://rayman.nekoweb.org",
+    "https://giikis2.nekoweb.org",
+    "https://mothwiingz.neocities.org",
+    "https://astralily.nekoweb.org",
+    "https://digital-goddess.nekoweb.org",
+    "https://nepeta.pet",
+    "https://viscerazombie.boo",
+    "https://db.brillcheese.com",
+    "https://ectobeing.neocities.org",
+    "https://zoranadragon.neocities.org",
+    "https://t-hates-you.neocities.org",
+    "https://cassiecandles.net",
+    "https://dyrknyte.neocities.org",
+    "https://kitnomaly.neocities.org",
+    "https://sleepycircus.neocities.org",
+    "https://otaku.nekoweb.org",
+    "https://oceansandy02.neocities.org",
+    "https://simpolomeo.neocities.org",
+    "https://spuds.neocities.org",
+    "https://enty.nekoweb.org",
+    "https://weatherchannel.neocities.org",
+    "https://silly-beanz.neocities.org",
+    "https://idolum.nekoweb.org",
+    "https://thumtacka.nekoweb.org",
+    "https://freakysunshine.neocities.org",
+    "https://alicesdumbstuff.neocities.org",
+    "https://calicocritter.nekoweb.org",
+    "https://dumbgarage.neocities.org",
+    "https://silly-goober.neocities.org",
+    "https://pentumbra.space",
+    "https://beaus-silly-folder.nekoweb.org",
+    "https://calico.nekoweb.org",
+    "https://thepersonever.net",
+    "https://acidicalchemist.neocities.org",
+    "https://axel.nekoweb.org",
+    "https://yatagarasu.nekoweb.org",
+    "https://bloodgulch.neocities.org",
+    "https://puppyjuan.nekoweb.org",
+    "https://starsabove.nekoweb.org",
+];
+
+var names = [
+    "evie",
+    "max",
+    "sev",
+    "corvidae",
+    "lapis",
+    "felixfever",
+    "kasper",
+    "rstyxd",
+    "rayman",
+    "giiki's lair",
+    "moth",
+    "astralily",
+    "digital goddess",
+    "nepeta",
+    "⚠ viscera",
+    "sep",
+    "⚠ vectobeing",
+    "zorana's site",
+    "t",
+    "cassie",
+    "⚠ dyrk",
+    "kitnomaly",
+    "calaban",
+    "otaku",
+    "ocean",
+    "⚠ simpolomeo",
+    "spuds",
+    "enty",
+    "ribsy",
+    "silly",
+    "⚠ idolum",
+    "thumtacka",
+    "samy",
+    "alice",
+    "calico",
+    "the dumb garage",
+    "sillygoober",
+    "hq",
+    "beau",
+    "seer",
+    "jade",
+    "acidicAlchemist",
+    "ax",
+    "yatagarasu",
+    "blood gulch",
+    "the puppypedia",
+    "sophie",
+];
+
+var newimages = [
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/evie.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/max.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/sev.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/corvidae.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/lapis.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/felixfever.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/kasper.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/rstyxd.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/rayman.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/giikislair.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/moth.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/astralily.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/digitalgoddess.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/nepeta.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/viscera.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/sep.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/ectobeing.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/zorana.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/t.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/cassie.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/dyrk.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/kitnomaly.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/calaban.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/otaku.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/ocean.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/simpolomeo.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/spuds.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/enty.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/ribsy.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/silly.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/idolum.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/thumtacka.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/samy.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/alice.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/calico.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/dumbgarage.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/sillygoober.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/hq.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/beau.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/seer.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/jade.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/acidicAlchemist.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/ax.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/yatagarasu.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/bloodgulch.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/puppypedia.png",
+    "https://file.garden/ZoVbPUYSQHEtpdHk/new-doodlering/icons/sofie.png",
+];
+
+var doodlers=sites.slice();
+
+//the name of the ring
+var ringName = 'Doodlering';
+
+/* the unique ID of the widget. two things to note:
+ 1) make sure there are no spaces in it - use dashes or underscores if you must
+ 2) remember to change 'doodlering' in the widget code you give out and all instances of '#doodlering' in the css file to match this value!*/
+var ringID = 'doodlering';
+
+//should the widget include a link to an index page?
+var useIndex = true;
+//the full URL of the index page. if you're not using one, you don't have to specify anything here
+var indexPage = 'https://evehibi.nekoweb.org/doodlering/';
+
+//should the widget include a random button?
+var useRandom = true;

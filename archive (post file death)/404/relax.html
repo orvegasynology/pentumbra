@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PENTUMBRA / </title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <script>
+      (function titleScroller(text) {
+        document.title = text;
+        setTimeout(function () {
+          titleScroller(text.substr(1) + text.substr(0, 1));
+        }, 500);
+      }(" its okay. You can relax now. / 404"));
+    </script>
+    <link href="/styleheets/main.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body style="position:relative;width:500px;margin-left:auto;margin-right:auto;">
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const audioFiles = [
+          //'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/Watcher.mp3',
+          //'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/Featherfall.mp3',
+          'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/Endless.mp3',
+          //'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/3-03%20House.mp3',
+          //'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/1-47.%20Labyrinthine(1).mp3',
+          'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/1-46.%20Aerie.mp3',
+          'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/1-43.%20An%20Ordinary%20Day.mp3',
+          'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/1-42.%20Comforting%20Memories.mp3',
+          //'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/1-39.%20Infinite%20Amethyst.mp3',
+          'https://file.garden/Zhc8cm4ERUKAhsSo/notfound/1-29%20Riding%20(Day).mp3',
+        ];
+
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        function playRandomAudio() {
+          const randomIndex = Math.floor(Math.random() * audioFiles.length);
+          audioPlayer.src = audioFiles[randomIndex];
+          audioPlayer.play();
+        }
+
+        audioPlayer.addEventListener('ended', playRandomAudio);
+        playRandomAudio();
+      });
+    </script>
+    <audio id="audioPlayer"></audio>
+    <p style="text-align:center;color:grey;">404. AHHH JIMCURYL JUMPSCARE</p>
+    <p style="text-align:center;animation:fadein 9s ease-in;-moz-animation: fadein 9s ease-in;font-size:8px;color:lightgrey;">
+      <a href="/" style="font-decoration:none;color:lightgrey">go home?</a><br>
+      <img style="height:300px" src="/data/art/mouthwash/oldmanyaoi2.png">
+    </p>
+    <style>
+
+      body {
+        animation: fadein 4s;
+        height:900px;
+        overflow:none
+      }
+      @keyframes fadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      html {
+        cursor:crosshair
+        }
+    </style>
+  </body>
+</html>

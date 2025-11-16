@@ -1,0 +1,81 @@
+<!-- if you come here to mooch off of code be my guest.-->
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / ALBUMS</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/pagesheets/msuic.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/pagesheets/mymusic.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    </head>
+    <body>
+      <audio src="/audio/delta/mini-studio-toby-fox.mp3" autoplay id="mainplayer"></audio>
+      <div class="ass">
+        <div class="flex">
+          <div class="bodyer">
+            <div class="textb">
+              <div class="thing" style="color:black">
+                <p style="margin-left:20px">
+                music is one of my favorite hobbies, both creating and listening to it.
+              </p>
+              <p>
+                this page will have both the music that i listen to, as well as music that I've created. links to plugins, samples, stems, and others can be found on the <a href="/resources.html">resources </a>page.
+              </p></div>
+            </div>
+          </div>
+          <div><img src="/data/assets/fun/bee.gif"></div>
+        </div>
+      </div>
+      <p>do not worry too much about the autoplaying music, it should stop once you click on an audio :) (good luck turning it off after that tho)</p>
+      <p>GUYS I LOST MY MUSIC. AND I DINT HAVE IT DOWNLOADED ON MY MAIN DRIVE AND THE FILES CORRUPTED ON NEOCITIES. FUCK. SO SORRY. I HAVE TO MAKE MORE MUSIC.</p>
+      </body>
+      <script>
+        const mainPlayer = document.getElementById('mainplayer');
+const audioElements = document.querySelectorAll('audio:not(#mainplayer)');
+
+audioElements.forEach(audio => {
+    audio.addEventListener('play', () => {
+        if (!mainPlayer.paused) {
+            mainPlayer.pause();
+        }
+    });
+
+    audio.addEventListener('ended', checkAudioStatus);
+    audio.addEventListener('pause', checkAudioStatus);
+});
+
+function checkAudioStatus() {
+    const anyAudioPlaying = Array.from(audioElements).some(audio => !audio.paused);
+    if (!anyAudioPlaying) {
+        mainPlayer.play();
+    }
+}
+      document.addEventListener("DOMContentLoaded", function () {
+        const audioFiles = [
+          '/audio/delta/mini-studio-toby-fox.mp3',
+          '/audio/delta/dialtone-toby-fox.mp3',
+          '/audio/delta/ferris-wheel-toby-fox.mp3',
+          '/audio/delta/it-s-showtime-toby-fox.mp3',
+          '/audio/delta/metal-crusher-toby-fox.mp3',
+          '/audio/delta/sound-studio-toby-fox.mp3',
+          '/audio/delta/mini-studio-toby-fox.mp3',
+          '/audio/delta/wrong-enemy-toby-fox.mp3',
+          ];
+
+        const audioPlayer = document.getElementById('mainplayer');
+
+        function playRandomAudio() {
+          const randomIndex = Math.floor(Math.random() * audioFiles.length);
+          audioPlayer.src = audioFiles[randomIndex];
+          audioPlayer.play();
+        }
+
+        audioPlayer.addEventListener('ended', playRandomAudio);
+        playRandomAudio();
+      });
+      </script>
+</html>

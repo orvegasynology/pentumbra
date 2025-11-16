@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+
+<head>
+    <title>PENTUMBRA / GALLERY</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/pagesheets/gallery.css" type="text/css">
+</head>
+
+<body>
+<div class="body">
+    <audio src="https://files.catbox.moe/14kfyf.mp3" autoplay loop></audio>
+    <div class="container" id="buttonContainer">
+        <a href="/index.html"><button class="button">index</button></a>
+        <a href=""><button class="dead button">original</button></a>
+        <a href="digital/doodls.html"><button class="button">doodles</button></a>
+        <a href="/musci/index.html"><button class="button">music</button></a>
+        <a href="/art/index.html"><button class="dead button">pixel art</button></a>
+        <a href=""><button class="dead button">animation</button></a>
+    </div>
+
+        <div class="info">
+        <div class="fursona"></div>
+        <div class="chat">
+<p id="phrase" style="color:black">pls pls pls bro</p>
+<p> &sung; results - akira yamaoka</p>
+             <div id="ncring"><script type="text/javascript" src="https://neocreatives.neocities.org/onionring-variables.js"></script><script type="text/javascript" src="https://neocreatives.neocities.org/onionring-widget.js"></script></div>
+
+        </div>
+        </div>
+        </div>
+      
+        
+    <script>
+        const buttons = document.querySelectorAll('.button');
+        const container = document.getElementById('buttonContainer');
+        const radius = 300; 
+        const speed = 0.002;
+        let angle = 5;
+        let animationId;
+
+        function animateButtons() {
+            angle += speed;
+            buttons.forEach((button, index) => {
+                const buttonAngle = angle + (index * (2 * Math.PI / buttons.length));
+                const x = radius * Math.cos(buttonAngle) + radius; 
+                const y = radius * Math.sin(buttonAngle) + radius;
+                button.style.left = `${x}px`;
+                button.style.top = `${y}px`;
+            });
+            animationId = requestAnimationFrame(animateButtons);
+        }
+
+        container.addEventListener('mouseenter', () => {
+            cancelAnimationFrame(animationId);
+        });
+
+        container.addEventListener('mouseleave', () => {
+            animateButtons();
+        });
+
+        animateButtons(); 
+        
+        var phrase = [
+        "I often use Ms Paint, Krita, Kleki, and IbisPaintx to draw.",
+        "I use Toon Boom Harmony, FL Studio, and Flipaclip to animate.",
+        "As of 2024, ive been drawing for 14 years.",
+        "I use OpenMPT and Jummbox for music.",
+        "I have a Gaomon M106K Pro.",
+        "Pirate Clip Studio Paint, ???, Profit",
+        "Pirate Photoshop, ???, Profit",
+        "Pirate Adobe, ???, Profit",
+    ];
+
+
+    document.querySelector("#phrase").innerHTML =
+        phrase[Math.floor(Math.random() * phrase.length)];
+
+    </script>
+    <script src="/scripts/snow.js"></script>
+    </body>
+</html>

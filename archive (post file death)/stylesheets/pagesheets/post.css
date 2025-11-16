@@ -1,0 +1,44 @@
+body {
+  background-size:contain;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+   font-family:basis;
+  font-size: 18px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  text-rendering:geometricPrecision;
+  }
+a {
+  color:darkblue
+  }
+p {
+  text-indent:30px;
+  }
+pre {
+  background-color:rgba(0, 0, 0, 0.07);
+  white-space: pre-wrap; 
+  padding:10px
+  }
+code {
+  opacity:0.8
+}
+::selection {
+  color:black ;
+  background-color:yellow;
+  }
+
+::-webkit-scrollbar {
+  width:0px
+  }
+h1 {
+  font-size:17px;
+    font-family:vcrosd;
+    font-weight:normal;
+  }
+h2 {
+  font-size:15px;
+  font-family:vcrosd;
+    font-weight:normal;
+
+}

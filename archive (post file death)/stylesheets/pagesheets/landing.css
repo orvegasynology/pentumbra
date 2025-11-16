@@ -1,0 +1,150 @@
+body {
+  background-image:url("/data/assets/grounds/darth-stripe.png");
+  background-color:black;
+  position:relative;
+  width:500px;
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+  }
+.body {
+  width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:60px;
+  height:400px;
+  }
+a {
+  color:white
+  }
+.webinf {
+  }
+.sideb {
+  width:175px;
+  }
+.webrings {
+  height:413px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding:5px;
+  }
+.mainbox {
+  width:325px;
+  background-color:black;
+  background-image: url("/data/assets/grounds/black-twill.png");
+  }
+.realheader {
+  height:100px;
+  background-color:white;
+  border-left:1px solid black;
+  background-image:url("/data/assets/tba.png");
+  background-attachment: fixed;
+  background-position: -20px 230px;
+  text-align: right;
+  }
+.webrings h1 {
+  font-family:ibmcga2y;
+  font-weight:normal;
+
+  }
+.webrings {
+  background-image:url("/data/assets/grounds/dotnoise-light-grey.png");
+  background-color:white;
+  }
+.webrings a {
+  color:black
+  }
+  .lettera:hover {
+    color: red;
+    position: relative;
+    bottom: 3px
+}
+
+.lettera::selection {
+    color: red
+}
+
+.letterb:hover {
+    color: orangered;
+    position: relative;
+    bottom: 3px
+}
+
+.letterb::selection {
+    color: orangered
+}
+
+.letterc:hover {
+    color: yellow;
+    position: relative;
+    bottom: 3px
+}
+
+.letterc::selection {
+    color: yellow
+}
+
+.letterd:hover {
+    color: lime;
+    position: relative;
+    bottom: 3px
+}
+
+.letterd::selection {
+    color: lime
+}
+
+.lettere:hover {
+    color: blue;
+    position: relative;
+    bottom: 3px
+}
+
+.lettere::selection {
+    color: blue
+}
+
+.letterf:hover {
+    color: magenta;
+    position: relative;
+    bottom: 3px
+}
+
+.letterf::selection {
+    color: magenta
+}
+.header h1 {
+    font-size: 0;
+    font-family: "ibmcga2y";
+    font-weight: normal;
+    text-shadow: 2px 2px black;
+    color:white;
+    position:relative;
+    text-align:right;
+}
+.text {
+  color:white;
+  text-indent:20px;
+  padding:9px;
+  }
+.warning {
+  color:black;
+  background-color:white;
+  border:3px solid grey;
+  text-indent:0px;
+  text-align:center;
+  margin:7px;
+  }
+.enter {
+  font-family:ibmcga2y;
+  text-align:center;
+  text-shadow:0px 2px black, 2px 0px black, -2px 0px black, 0px -2px black;
+  font-weight:normal
+  }
+  .enter:hover {
+    letter-spacing: 3px;
+    font-style:italic
+    }
+.header h1 span {
+    font-size: 32px;
+}

@@ -1,0 +1,209 @@
+<!-- if you come here to mooch off of code be my guest. just dont steal graphics. if you wanna know where i found something, ask! or if i made it then dont use it.-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / RESOURCES</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/pagesheets/newres.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="body">
+        <h1>RESOURCES</h1>
+        <div class="container">
+          <div class="yellow"></div>
+            <div class="flex">
+                <div class="nav">
+                  <div class="thing"></div>
+                    <ul id="linklist">
+                        <a href="graphix.html" target="iframe"><li><p>graphics</p></li></a>
+                        <a href="software.html" target="iframe"><li><p>software</p></li></a>
+                        <a href="tools.html" target="iframe"><li><p>webmastery</p></li></a>
+                        <a href="fireurianiumnosurvivors.html" target="iframe"><li><p>fun<span style="color:yellow;font-family:Ibmcga2y">!</span> fun<span style="color:yellow;font-family:Ibmcga2y">!</span> fun<span style="color:yellow;font-family:Ibmcga2y">!</span></p></li></a>
+                        <a href="noise.html" target="iframe"><li><p>music</p></li></a>
+                        <a href="fonts.html" target="iframe"><li><p>fonts</p></li></a>
+                        <a href="code.html" target="iframe"><li><p>code snippets</p></li></a>
+
+                    </ul>
+                    <div id="chao"></div>
+                    
+<ul id="playlist"></ul>
+<div id="controls" >
+  <div class="flex">
+  <div>
+    <img id="album-src" style="height:75px;width:75px">
+    <p>
+    <span><button id="prev">◄</button></span>
+    <span><button id="play">►</button></span>
+    <span><button id="next">►</button></span>
+        </p>
+  </div>
+  <div style="padding:2px;position:relative">
+  <p id="title"></p>
+    <p id="artist"></p>
+    <span id="duration-num">00:00 / 00:00</span>
+    <input type="range" id="duration" value="0" style="">
+  </div>
+  </div>
+</div>
+    <audio id="audio" src=""></audio>
+                </div>
+                <div class="contents">
+                  <iframe id="iframe" name="iframe" src="graphix.html" style="height:575px;width:100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+const songs = [
+    { title: "Boss 1 (Pinch)", artist: "Sonic Advance 2", duration: 64, src: "/resources/Boss (Pinch).mp3", album: "/resources/sa2.png" },
+    { title: "Musical Plant Zone 2", artist: "Sonic Advance 2", duration: 130, src: "/resources/sa2-musicalplantzone-2.mp3", album: "/resources/sa2.png" },
+    { title: "Menu", artist: "Sonic Advance 1/2", duration: 64, src: "/resources/sa2-menu.mp3", album: "/resources/sa2.png" },
+    { title: "Tung the Icelandic Lesbian", artist: "Kitsune²", duration: 118, src: "/resources/tung-the-icelandic-lesbian-halley-labs.mp3", album: "/resources/star-road.png" },
+    { title: "Grassland", artist: "Super Mario Bros 3", duration: 106, src: "/resources/grassland-smb3.mp3", album: "/resources/smb.png" },
+];
+
+let currentSongIndex = Math.floor(Math.random() * songs.length);
+const audio = document.getElementById('audio');
+const title = document.getElementById('title');
+const artist = document.getElementById('artist');
+const albumSrc = document.getElementById('album-src');
+const durationNum = document.getElementById('duration-num');
+const durationSlider = document.getElementById('duration');
+const playButton = document.getElementById('play');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+function loadSong(index) {
+    const song = songs[index];
+    title.innerText = song.title;
+    artist.innerText = song.artist;
+    albumSrc.src = song.album;
+    audio.src = song.src;
+    durationSlider.max = song.duration;
+    durationSlider.value = 0;
+    updateDurationDisplay(0, song.duration);
+}
+
+function updateDurationDisplay(currentSeconds, totalSeconds) {
+    const currentMinutes = Math.floor(currentSeconds / 60);
+    const currentSecs = currentSeconds % 60;
+    const totalMinutes = Math.floor(totalSeconds / 60);
+    const totalSecs = totalSeconds % 60;
+    durationNum.innerText = totalSeconds ? 
+        `${String(currentMinutes).padStart(2, '0')}:${String(currentSecs).padStart(2, '0')} / ${String(totalMinutes).padStart(2, '0')}:${String(totalSecs).padStart(2, '0')}` : 
+        '00:00 / 00:00';
+}
+
+playButton.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playButton.innerText = 'll';
+        const interval = setInterval(() => {
+            if (!audio.paused) {
+                durationSlider.value = Math.round(audio.currentTime);
+                updateDurationDisplay(durationSlider.value, Math.round(audio.duration));
+                if (durationSlider.value >= Math.round(audio.duration)) {
+                    clearInterval(interval);
+                }
+            } else {
+                clearInterval(interval);
+            }
+        }, 1000);
+    } else {
+        audio.pause();
+        playButton.innerText = '▶';
+    }
+});
+
+prevButton.addEventListener('click', () => {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    loadSong(currentSongIndex);
+    audio.play();
+    playButton.innerText = 'll';
+});
+
+nextButton.addEventListener('click', () => {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    loadSong(currentSongIndex);
+    audio.play();
+    playButton.innerText = 'll';
+});
+
+loadSong(currentSongIndex);
+</script>
+<script>
+const inputRange = document.getElementById("duration");
+const activeColor = "#ff9914";
+const inactiveColor = "#ffde00";
+
+inputRange.addEventListener("input", function() {
+  const ratio = (this.value - this.min) / (this.max - this.min) * 100;
+  this.style.background = `linear-gradient(90deg, ${activeColor} ${ratio}%, ${inactiveColor} ${ratio}%)`;
+});
+</script>
+    <script src="/scripts/pentumbra.js"></script>
+    <script src="/scripts/spa.js"></script>
+    <script>
+        const listItems = document.querySelectorAll('li');
+  const clickSound = new Audio('fnf.mp3');
+  const hoverSound = new Audio('/fun/halley-lapfox/nav.ogg');
+
+  listItems[0].classList.add('active');
+
+  listItems.forEach(item => {
+      item.addEventListener('click', () => {
+          listItems.forEach(li => li.classList.remove('active'));
+          item.classList.add('active');
+          clickSound.currentTime = 0;
+          clickSound.play();
+          hoverSound.pause(); // Cancel hover sound on click
+      });
+
+      item.addEventListener('mouseover', () => {
+          hoverSound.currentTime = 0;
+          hoverSound.play();
+      });
+  });
+    </script>
+  <script>
+          const chao = document.getElementById('chao');
+
+        document.addEventListener('mousemove', (event) => {
+            const { clientY } = event;
+            const windowHeight = window.innerHeight;
+
+            if (clientY > windowHeight * 0.75) {
+                chao.style.backgroundImage = "url('/resources/down.png')";
+            } else if (clientY > windowHeight * 0.5) {
+                chao.style.backgroundImage = "url('/resources/downless.png')";
+            } else if (clientY > windowHeight * 0.25) {
+                chao.style.backgroundImage = "url('/resources/upless.png')";
+            } else {
+                chao.style.backgroundImage = "url('/resources/up.png')";
+            }
+        });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script>
+  const activeColor = "#ff9914";
+const inactiveColor = "#ffde00";
+
+$("#inputRange").on("input", function() {
+  const ratio = (this.value - this.min) / (this.max - this.min) * 100;
+  $(this).css("background", `linear-gradient(90deg, ${activeColor} ${ratio}%, ${inactiveColor} ${ratio}%)`);
+});
+</script>
+</body>
+
+</html>

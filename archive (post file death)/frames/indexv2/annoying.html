@@ -1,0 +1,131 @@
+<!-- if you come here to mooch off of code be my guest. Do it. just dont steal graphics. if you wanna know where i found something, email me!-->
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / </title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    
+        <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+    <script>
+      window.addEventListener("load", (event) => {
+  new cursoreffects.ghostCursor();
+});
+    </script>
+
+    <style>
+      body {
+        margin-top:-20px;
+        color:yellow;
+        background-image:url("/data/assets/grounds/fake-brick.png");
+        font-family:vcrosd;
+        font-size:14px;
+        font-weight:600;
+      }
+      img {
+  pointer-events: auto;
+      }
+      code {
+        text-transform:uppercase;
+        color:orangered;
+        font-size:14px;
+        font-weight:bold;
+        text-shadow:1px 1px yellow, -1px -1px red;
+      }
+      #keeper {
+        opacity:0.7;
+        font-style:italic;
+      }
+      a {
+        color:lime;
+        text-decoration:none;
+      }
+      .congrat {
+            border: 5px solid trans_parent;
+            background-clip:padding-box;
+            background-color:blue;
+            color:yellow;
+            padding:2px;
+            font-weight:bold;
+            border:2px dashed lime;
+            border-radius:5px;
+      }
+      p {
+        text-indent:10px;
+      }
+    </style>
+    </head>
+<body>
+      <!-- FC2 Clap tag starts here -->
+    <a href="//clap.fc2.com/post/pentumbra/?url=https%3A%2F%2Fpentumbra.neocities.org&title=Pentumbra" target="_blank"
+        title="Web Clap by FC2"><img src="https://clap.fc2.com/images/button/blue/pentumbra?url=https%3A%2F%2Fpentumbra.neocities.org&amp;lang=en" alt="Web Clap by FC2" style="border:none;position:fixed;bottom:0px;right:0px;z-index:999999" /></a>
+    <!-- FC2 Clap tag ends here -->
+    <img src="/data/assets/UI/welcome1.gif" onmouseover="this.src='/data/assets/UI/welcome.gif'" onmouseout="this.src='/data/assets/UI/welcome1.gif'" style="height:60px;position:relative;top:20px">
+    <p id="keeper"></p>
+    <p> just passing through? click <a href="/webrings.html">here</a> to see the webrings.</p>
+    <p class="congrat">congratulations for stumbling upon this unkempt dystopian websteland! for that, visitor #<span id="lie"></span>, you get a <a target="_parent" href="/sitemap.html">A MAP!!!!</a> You may never need it, but do remember to consult to it whenever lost. <img src="/data/assets/pix/smiley1.gif"></p>
+    <p style="text-align:center"></p>
+    <p>in simplest form, <code>pentumbra</code> is a hobby-personal site created by an artist of sorts known as <br><span id="name"></span>!</p><p>Oh... you mean, <i>what</i> is pentumbra... its <a target="_parent" href="https://mysingingmonsters.fandom.com/wiki/Pentumbra">this</a> lil guy. <code>pentumbra</code> was created to share my interests and art with the world without the usage of algorithm and likes. cool.</p>
+    <p> <img src="/data/assets/HQ/dog/thankyou.gif" style="float:right"> I'm <span id="name-too">Cor</span>, professional procrastinator and queer dog-tiger-goat-person. I like coding stufg and making my characters do stupid things. liek and subrcribe for more. learn more about me <a target="_parent" href="/webmaster.html">hhheeere</a></p>
+    <p style="text-align:center">
+      enjoy yer stay!!!<br><img src="/data/assets/div/notes.gif">
+    </p>
+    <script>
+const phrases = ["TSUMIHQ", "IMNOTACROOK", "REGTAROU", "REIGENHATER91", "simply COR"];
+const spanElement = document.getElementById('name');
+
+let index = 0;
+
+function typeName() {
+    spanElement.textContent = phrases[index];
+    index = (index + 1) % phrases.length;
+    setTimeout(typeName, 500);
+}
+
+typeName();
+</script>
+    <script>
+function generateRandomNumber() {
+    return Math.floor(Math.random() * 99999999) + 1;
+}
+
+const randomNumber = generateRandomNumber();
+document.getElementById('lie').innerText = randomNumber;
+
+if (randomNumber === 1) {
+    document.getElementById('lie').innerHTML += "... NUMBER ONE!?!?! I never thought id meet you!! Jinkies. have a cookie. <img src='/cookie.png'>";
+} 
+
+localStorage.setItem('randomNumber', randomNumber);
+
+if (randomNumber === 1 ){
+    document.getElementById('lie').innerText = localStorage.getItem('randomNumber');
+}
+
+    </script>
+    <script>
+      let visitCount = localStorage.getItem('visitCount') ? parseInt(localStorage.getItem('visitCount')) : 0;
+
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount);
+
+const keeper = document.getElementById('keeper');
+
+if (visitCount >= 1000) {
+    keeper.innerHTML = "THANK YOU FOR YOUR SUPPORT!!! :D";
+} else if (visitCount >= 500) {
+    keeper.innerHTML = `welcome back {username}. oh. I cant access that. sorry. thank you for visiting!`;
+} else if (visitCount >= 100) {
+    keeper.innerHTML = "woagh... im flattered... have you shared my site around?";
+} else if (visitCount >= 50) {
+    keeper.innerHTML = "wow... thank you for your visits...";
+}  else if (visitCount >= 10) {
+    keeper.innerHTML = "you really like this site, huh?";
+}
+    </script>
+    </body>
+</html>

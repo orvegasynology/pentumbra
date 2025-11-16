@@ -1,0 +1,36 @@
+body {
+    font-family: "MS UI Gothic", Tahoma;
+    font-size: 12px;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    text-rendering:geometricPrecision;
+}
+/*img {
+  pointer-events:none
+} note to self never do this again. */
+iframe {
+  border:none;
+}
+::selection {
+    background-color:darkblue;
+    color:yellow;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight:normal;
+}
+ul {
+  margin:0px;
+  padding:0px;
+  list-style-type:square;
+}
+a {
+  color:inherit;
+}
+.flex {
+    display:flex;
+}
+
+::-webkit-scrollbar {
+  width:0px
+  }

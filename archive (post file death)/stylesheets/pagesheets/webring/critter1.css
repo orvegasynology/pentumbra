@@ -1,0 +1,54 @@
+    .crittering {
+        font-family: basiic, "MS UI Gothic", Tahoma;
+        font-size: 14px;
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+        text-rendering: geometricPrecision;
+        text-align: center;
+        font-weight: bold;
+        width:115px;
+        position:relative;
+        margin-left:auto;
+        margin-right:auto;
+        display: block;
+    }
+    .crittering img {
+        height: 32px;
+        width: 32px;
+        animation: 1s boop infinite steps(3);
+    }
+    a {
+              font-family: ibmcga2y;
+    }
+    @keyframes boop {
+      0% {
+        rotate:-10deg;
+      }
+      50% {
+        rotate:10deg
+      }
+      100% {
+        rotate:-10deg;
+      }
+    }
+    h1 {
+      color:white;
+    }
+    .crittering h1 a {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: inky;
+        letter-spacing: 1.5px;
+        color: white;
+        text-shadow: 1px 1px black, 1px 0px black, 0px 1px black, -1px -1px black, -1px 0px black, 0px -1px black, 1px -1px black, -1px 1px black, 2px 2px black;
+    }
+    .crittering p {
+        text-shadow: 1px 1px black, 1px 0px black, 0px 1px black, -1px -1px black, -1px 0px black, 0px -1px black, 1px -1px black, -1px 1px black;
+        color: white;
+    }
+    .crittering a {
+        text-shadow: 1px 1px black, 1px 0px black, 0px 1px black, -1px -1px black, -1px 0px black, 0px -1px black, 1px -1px black, -1px 1px black;
+        color: white;
+        text-decoration: none;
+    }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BLOG POST / TUTORIAL</title>
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <link href="/stylesheets/pagesheets/post.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/stylesheets/font-bitmap.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/scripts/bg.js"></script>
+  </head>
+  <body>
+      <h1>No more external scripts? no problem. Oct 14th 2024</h1>
+      <a href="/blog/tutorials/github.html" target="blank_">view in full?</a>
+      <a href="#tut" >or skip to the actual tutorial lol</a>
+      <p style="color:orangered">note: this is only for neocities or any other platform that does not allow usage of external scripts.</p>
+      <p>im pissed about this new issue regarding neocities, especially since I came back (i used to host on github).</p>
+      <p>my initial neocities site was created during 2022, which at the time, i was allowed to use an external script like status.cafe statuses. and then i ditched neocities, and I came back this year. I built my site with the live editor on brackets, and when I linked the status.cafe widget to it, it worked out.</p>
+      <p>I published my site to neocities. Then it didn't.</p>
+      <p>I went nuts, looking for why it didn't work. I searched google, avoiding reddit, and when google didnt provide answers, i turned to reddit. (follow me at TsumiHQ! jk. unless.)</p>
+      <p>sites created after January 2024 do not have access to external scripts like php. that means no status.cafe. no lastfm widget (it didnt work for me until i used the method soon to be shown, maybe i was doing it wrong). no php (surperior) site counters. this sucks.</p>
+      <p>im actually not sure about the last two. i only ever use status.cafe. I can assume that php anything just wont work lol.</p>
+      <p>thats my little sob story that lead us to today, sobbing, crying, looking for alternatives, manually writing statuses and manually changing the last song we played.</p>
+      <p id="tut">i found a work around, instead of that one rss thing for status.cafe</p>
+      <p>this alternative makes it more customizable.</p>
+      <h1></h1>
+      <ul>
+          <li>
+              Github account
+          </li>
+          <li>
+              Github repository (yoursite.github.io), see a tutorial <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site" target="_blank">here</a> (i dont have access to git at this moment, sorry)
+          </li>
+          <li>
+              iframe knowledge. (not required, but its a lifesaver.)
+          </li>
+      </ul>
+      <p>you can guess whats about to happen. in short, we're creating files in a github repo, plugging the external scripts, and sticking them in an iframe.</p>
+      <p>if you dont know wtf is happening, keep reading.</p>
+      <h1>step 1: creating a site on github.</h1>
+      <p>I linked a tutorial on how to do this already. once you've done this, you should create an <code>index.html</code> and point your git repo to your neocities site (add &lt;meta http-equiv="refresh" content="0;url=YOUR-NEOCITIES-SITE"/&gt; to your <code>head</code>, replace the url with your full URL), just for quality of life, or snoopers lol.</p>
+      <h1>step 2: adding your external script to a new page</h1>
+          <p>create a new html file, name it whatever, it doesn't matter. you're just following basic coding principals here, with the body and header being included in the file. then you just plug your external script inside of the body. more than likely it should work.</p>
+          <p>edit this page to your liking, add one of your css files from neocities (or create one on github), and you can even do <code>background:transparent</code> in the body css to make the background transparent for the next step.</p>
+          <p>id also recommend removing the scrollbar altogether in the git page. <code>::webkit-scrollbar {width:0}</code> for chronium based browsers, <code>    scrollbar-width: none;</code> for like, firefox or something. </p>
+          <p>feel free to reference my <a href="https://github.com/imnotaacrook/imnotaacrook.github.io">git site</a> for more clarity. i do my best lol</p>
+      <h1>step 3: iframe it.</h1>
+          <p>self explanatory. edit the iframe to your liking. use <code>border="0"</code> to remove that ugly inset (or outset, i forget) border. or don't. its up to you, really.</p>
+      <img src="/siggy.png">
+      <p>questions or concerns? email me. hqpentumbras@gmail.com</p>
+  </body>
+    </html>

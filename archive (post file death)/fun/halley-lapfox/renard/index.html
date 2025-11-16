@@ -1,0 +1,165 @@
+<!-- nothing on this page belongs to me but you can steal code i guess.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Boring Stuff -->
+    <title>PENTUMBRA / RENARD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/data/assets/pokemon/arcanine.gif" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/font-bitmap.css" type="text/css">
+    
+    <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+    <style>
+      body {
+        background-color: #d2ff00;
+opacity: 1;
+background-image:  repeating-linear-gradient(45deg, #baff00 25%, transparent 25%, transparent 75%, #baff00 75%, #baff00), repeating-linear-gradient(45deg, #baff00 25%, #d2ff00 25%, #d2ff00 75%, #baff00 75%, #baff00);
+background-position: 0 0, 24px 24px;
+background-size: 48px 48px;
+      }
+      .ren {
+        position:fixed;
+        top:-20px;
+        animation:rotate 10s infinite alternate;
+        pointer-events:none;
+        height:800px;
+        z-index:999;
+      filter: drop-shadow(2px 2px #38f709);
+      }
+      .ard {
+      filter: drop-shadow(2px 2px #38f709);
+        height:140px;
+        position:absolute;
+        left:200px;
+        top:20px;
+        rotate:4deg
+      }
+      @keyframes rotate {
+        0% {
+          rotate:0deg
+        }
+        100% {
+          rotate:6deg
+        }
+      }
+      .body {
+        width:900px;
+        margin-left:auto;
+        margin-right:auto;
+        animation:updown 5s infinite alternate linear;
+      }
+      .div {
+        background-color:#b8ee3b;
+        border:8px solid #8709f7;
+        height:400px;
+        width:600px;
+        margin-left:400px;
+      }
+      .nom {
+        position:fixed;
+        bottom:0px;
+        right:0px;
+        height:200px;
+      }
+      .kanye {
+        width:300px;
+        position:relative;
+        background-image:url("canwekillhim.png");
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:70%;
+      }
+      @keyframes updown {
+        0% {
+          margin-top:0px;
+        }
+        100% {
+          margin-top:20px;
+        }
+      }
+    </style>
+</head>
+<body>
+  <img src="renard.png" title="art by squeedgemonster" class="ren">
+  <img src="nom.png" class="nom">
+  <div class="body">
+    <img src="lapfox.png" style="height:120px;float:right">
+    <div class="div flex">
+      <div class="kanye">
+        <center>
+      <div style="width:40px; height:40px;position:relative;top:200px">
+	<div id="winamp-container"></div>
+    <script>
+const Winamp = window.Webamp;
+// All configuration options are optional.
+const webamp = new Webamp({
+    // Optional.
+    initialTracks: [
+        {
+            metaData: {
+                artist: "Because Maybe!",
+                title: "Go to the Party",
+            },
+            url: "/audio/lapfox/renard/gototheparty.mp3",
+        }, {
+            metaData: {
+                artist: "Because Maybe!",
+                title: "I'm a Blind Cave Salamander",
+            },
+            url: "/audio/lapfox/renard/blind cave salamander.mp3",
+        },
+        {
+            metaData: {
+                artist: "Because Maybe!",
+                title: "Banned Forever",
+            },
+            url: "/audio/lapfox/renard/banned forever.mp3",
+        },
+          {
+            metaData: {
+                artist: "Because Maybe!",
+                title: "Sinisterrrrrrrr",
+            },
+            url: "/audio/lapfox/renard/Sinisterrrrrrrr.mp3",
+        },
+        {
+            metaData: {
+                artist: "Shounen Bass! Turbo",
+                title: "Believe in UR Butt",
+            },
+            url: "/audio/lapfox/renard/Believe In UR Butt.mp3",
+        },
+        {
+            metaData: {
+                artist: "Shounen Bass! Turbo",
+                title: "(uᴥu) ⇨ TF",
+            },
+            url: "/audio/lapfox/renard/(uᴥu) ⇨ TF.mp3",
+        },
+        {
+            metaData: {
+                artist: "Shounen Bass! Turbo",
+                title: "＊.BUDDY",
+            },
+            url: "/audio/lapfox/renard/＊.BUDDY.mp3",
+        },
+      ],
+    initialSkin: {
+        url: "/webamp/Red_-_Amp.wsz"
+    },
+});
+webamp.renderWhenReady(document.getElementById('winamp-container'));
+</script>
+</div>
+</center>
+</div>
+      <div>
+          <img src="comicbookwoww.png" style="height:100%;border-left:2px solid white">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

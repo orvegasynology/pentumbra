@@ -1,0 +1,184 @@
+body {
+background-size:4%;
+background-image:url("/data/assets/grounds/transparent.png");
+animation:scroll 27s linear infinite;
+font-family: pressstart;
+font-size:14px;
+}
+.blur {
+  filter:blur(7px);
+}
+.blur:hover {
+  filter:blur(5px);
+}
+.blur:before {
+  border:3px solid black;
+  content:"nudity lol";
+}
+@keyframes scroll {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+p {
+  text-align: center;
+  color:blue;
+}
+#item-container img {
+  height:200px;
+  pointer-events: auto;
+  cursor:zoom-in;
+}
+.banner {
+  width:600px;
+  height:140px;
+  background-image:url("/data/assets/UI/doodads.png");
+  background-position: center;z-index:99;
+  background-repeat:no-repeat;
+  animation:2s squishy infinite linear alternate;
+  position:relative;
+}
+.aaah {
+  margin:2px;
+  background-color:#fff9d6;
+  border-radius: 10px;
+  padding:4px;
+}
+@keyframes squishy {
+  0% {
+    rotate:4deg;
+    transform:skew(-9deg);
+  }
+  100% {
+    rotate:-4deg;
+    transform:skew(9deg);
+
+  }
+
+}
+.container {
+  width:600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tooltip {
+  visibility:hidden;
+  background-color:black;
+  color:white;
+  text-align:center;
+  position:absolute;
+  font-family:squim;
+  left:-300px;
+  z-index:1001;
+  opacity:0;
+  width:120px;
+  border:1px solid black;
+  padding:2px;
+}
+.selected {
+ color:black !important; 
+ background-color:white !important;
+ border:2px solid black !important;
+ background-image:none !important;
+}
+#tag-list {
+  display:flex;
+  justify-content: center;
+flex-wrap: wrap;
+}
+#tag-list button {
+    margin:2px;
+    font-family:squim;
+}
+#tag-list button:nth-child(6n+1) {
+  border-top: 2px solid #6a0015;
+  border-right: 2px solid #6a0015;
+  border-left: 2px solid #bd0b00;
+  border-bottom: 2px solid #ff5100;
+  background: linear-gradient(to top, #e71800 50%, #e73100 0);
+  color: gold;
+}
+
+#tag-list button:nth-child(6n+2) {
+  border-top: 2px solid #d36000;
+  border-right: 2px solid #d36000;
+  border-left: 2px solid #e49500;
+  border-bottom: 2px solid #fffcaa;
+  background: linear-gradient(to top, #ffd500 50%, #f0ff00 0);
+  color: #ff2700;
+}
+
+#tag-list button:nth-child(6n+3) {
+  border-top: 2px solid #005c98;
+  border-right: 2px solid #005c98;
+  border-left: 2px solid #00b2c4;
+  border-bottom: 2px solid #00fa8c;
+  background: linear-gradient(to top, #00e542 50%, #1bff00 0);
+  color: #2000ed;
+}
+
+#tag-list button:nth-child(6n+4) {
+  border-top: 2px solid #0034ab;
+  border-right: 2px solid #0034ab;
+  border-left: 2px solid #0071cf;
+  border-bottom: 2px solid #379cf0;
+  background: linear-gradient(to top, #3d00fa 50%, #373ff0 0);
+  color: #c1ec15;
+}
+
+#tag-list button:nth-child(6n+5) {
+  border-top: 2px solid #030585;
+  border-right: 2px solid #030585;
+  border-left: 2px solid #5608c7;
+  border-bottom: 2px solid #b11bf7;
+  background: linear-gradient(to top, #6b06b6 50%, #cb15ec 0);
+  color: yellow;
+}
+
+#tag-list button:nth-child(6n+6) {
+  border-top: 2px solid #c70030;
+  border-right: 2px solid #c70030;
+  border-left: 2px solid #ea0059;
+  border-bottom: 2px solid #f500c1;
+  background: linear-gradient(to top, #ee004f 50%, #f71b6e 0);
+  color: #2000ed;
+}
+a:hover {
+  color:red;
+}
+.body {
+  border:6px solid orange;
+  border-radius:20px;
+  height:500px;
+  padding:10px;
+  background-image: linear-gradient(45deg, #ffed85 25%, #ffde70 25%, #ffde70 50%, #ffed85 50%, #ffed85 75%, #ffde70 75%, #ffde70 100%);
+background-size: 56.57px 56.57px;
+}
+#item-container {
+  border:1px solid blue;
+  background-color:#fffced;
+  height:365px;
+  overflow: auto;
+  margin-top:2.5px;
+  margin:5px;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color:blue;
+}
+.container:hover > .mac {
+  right:180px;
+  opacity:0.3;
+  transition:opacity 1.5s, right 3s;
+}
+.mac {
+  transition:1s opacity, right 2s;
+  position:fixed;
+  right:250px;
+  bottom:0px
+}
+

@@ -1,0 +1,158 @@
+.container {
+  width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+::selection {
+  background-color:black;
+  color:white;
+}
+body {
+  font-size:16px
+}
+.head {
+  border:1px solid black;
+  height:30px;
+  text-align: center;
+background-image: linear-gradient(45deg, #000000 4.55%, #ffffff 4.55%, #ffffff 50%, #000000 50%, #000000 54.55%, #ffffff 54.55%, #ffffff 100%);
+background-size: 15.56px 15.56px;
+    margin-bottom:16px;
+
+}
+p {
+    margin:0;
+}
+.head p {
+  color:white;
+  font-family:gameover;
+  font-size:16px;
+  text-shadow:2px 2px black, 0px 2px black, 2px 0px black, -2px 2px black, 2px -2px black, -2px -2px black;
+}
+.head p:before, .head p:after {
+  content:"<<<<<<<<<<<<<<<<<<<<<<<<<<";
+}
+.etems {
+  margin:2px;
+  margin-top:0px;
+  width:190px;
+  padding:2px;
+}
+.profile {
+  height:190px;
+  width:190px;
+  border:1px solid black;
+  background-image:url("/data/art/mouthwash/jiymm.png");
+  background-size:150%;
+  background-position:-30px -40px;
+}
+.info {
+  font-family:basiic;
+}
+.info p {
+  margin-top:2px;
+}
+.info hr {
+  border:none;
+  border-top:1px solid black;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+#user {
+  opacity:0.5;
+  pointer-events: none;
+}
+.thing {
+  margin:5px;
+  border:1px solid black;
+  padding:2px;
+}
+.name {
+  font-family:squim;
+}
+.pentumbra {
+pointer-events:none;background-color: #ffffff;
+opacity: 1;
+background-image:  repeating-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000), repeating-linear-gradient(45deg, #000000 25%, #ffffff 25%, #ffffff 75%, #000000 75%, #000000);
+background-position: 0 0, 6px 6px;
+background-size: 12px 12px;
+}
+#wobble {
+  font-family: inky;
+  font-size:32px;
+  color:white;
+  letter-spacing:2px;
+  margin:0;
+  text-shadow:2px 2px black, 0px 2px black, 2px 0px black, -2px 2px black, 2px -2px black, -2px -2px black, 4px 4px black, 2px 4px black;
+  transition:0.3s;
+  margin-top:-6px;
+  z-index:8;
+}
+#wobble:hover {
+  letter-spacing:6px;
+  transition:0.3s;
+}
+.nav ul {
+  display:flex;
+  list-style-type: none;
+  width:100%;
+  gap:3px
+}
+.flex {
+  height:500px;
+  margin-top:2px;
+}
+.bar {
+  height:100%;
+  width:200px;
+  font-family:squim;
+  border:1px solid black;
+}
+.mono {
+  letter-spacing: 0px;
+}
+.last {
+  margin-top:20px;
+}
+.userinf, .last {
+  font-size:12px;
+  opacity:0.5;
+}
+.main {
+  width:400px;
+}
+#button {
+  width:100%;
+  border:1px solid white;
+  background-color:black;
+  border-radius:none;
+  color:white;
+  font-family:gameover;
+  font-size:16px;
+}
+iframe {
+  width:100%;
+  height:100%;
+}
+marquee {
+  background-color:black;
+  color:white;
+  padding-top:2px;
+  box-sizing:content-box;
+}
+.nav a li, .nav li {
+    flex-grow: 1;
+  border:1px solid black;
+  background-color:white;
+  font-family:squim;
+  font-size:16px;
+  text-align:center;
+  padding-top:4px;
+  height:16px;
+  padding:1px;
+}
+.nav ul li:hover {
+  filter:invert(100);
+}
+.nav ul a li {
+  text-decoration: none;
+}
